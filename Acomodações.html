@@ -6,82 +6,670 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Of Animation - Acomodações</title>
+    <link rel="icon" type="image/jpg" href="./CSS/Imagens/homepage/Logo/Disney_site_logo.png" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 1.5vw;
+        }
+
+        p {
+            font-size: 0.8vw;
+        }
+
+        li {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        .content_comodidades_internas_list li{
+            font-size: 1.5vw;
+        }
+
+        h4 {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        main {
+            width: 90%;
+            display: flex;
+            margin-top: 105px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 105px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 100px 10px 10px 10px;
+        }
+
+
+        header li {
+            list-style: none;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 13vh;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        nav ul li {
+            display: inline-flex;
+            padding: 0.5% 3%;
+            margin-right: -5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header ul {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            float: right;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li:hover {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        nav {
+            display: flex;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            width: 70%;
+            position: fixed;
+        }
+
+        #logo {
+            width: 20%;
+        }
+
+        a img {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+
+        .mainfake {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .content_intro_acomodacoes {
+            width: 80%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+
+
+        .content_intro_acomodacoes_txt {
+            width: 37.5%;
+            text-align: left;
+            margin-right: 2.5%;
+        }
+
+        .content_intro_acomodacoes_img {
+            width: 57.5%;
+            margin-left: 2.5%;
+        }
+
+        .content_intro_acomodacoes_img img {
+            width: 100%;
+        }
+
+        .content_intro_quarto {
+            width: 80%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+ 
+
+        .content_intro_quarto_txt {
+            width: 37.5%;
+            text-align: left;
+            margin-left: 2.5%;
+        }
+
+        .content_intro_quarto_img {
+            width: 57.5%;
+            margin-right: 2.5%;
+        }
+
+        .content_intro_quarto_img img {
+            width: 100%;
+        }
+
+        .mainfake_imgs_quartos {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 775px;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        
+
+        .content_imgs_quartos {
+            height: 750px;
+            width: 100%;
+            overflow: hidden;
+
+        }
+
+        .texto_carrosel_imgs_quartos {
+            width: 100%;
+            height: 125px;
+        }
+
+        .content_imgs_quartos .navigation_imgs_quartos {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation_imgs_quartos {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bar_imgs_quartos {
+            width: 10%;
+            height: 10px;
+            border: 2px solid #000000;
+            margin: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .bar_imgs_quartos:hover {
+            background-color: #000000;
+        }
+
+        .mainfake_imgs_quartos input {
+            display: none;
+        }
+
+        .slides_imgs_quartos {
+            display: flex;
+            width: 800%;
+        }
+
+
+        .slide_imgs_quartos {
+            width: 12.5%;
+            transition: 0.6s;
+            height: 650px;
+            margin-top: 50px;
+        }
+
+        .slide_imgs_quartos img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #slide_imgs_quartos1:checked~.s_imgs_quartos1 {
+            margin-left: 0;
+        }
+
+        #slide_imgs_quartos2:checked~.s_imgs_quartos1 {
+            margin-left: -12.5%;
+        }
+
+        #slide_imgs_quartos3:checked~.s_imgs_quartos1 {
+            margin-left: -25%;
+        }
+
+        #slide_imgs_quartos4:checked~.s_imgs_quartos1 {
+            margin-left: -37.5%;
+        }
+
+        #slide_imgs_quartos5:checked~.s_imgs_quartos1 {
+            margin-left: -50%;
+        }
+
+        #slide_imgs_quartos6:checked~.s_imgs_quartos1 {
+            margin-left: -62.5%;
+        }
+
+        #slide_imgs_quartos7:checked~.s_imgs_quartos1 {
+            margin-left: -75%;
+        }
+
+        #slide_imgs_quartos8:checked~.s_imgs_quartos1 {
+            margin-left: -87.5%;
+        }
+
+        .slide_imgs_quartos button {
+            width: 100%;
+        }
+
+        .content_comodidades {
+
+            display: flex;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: center;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_comodidades_title {
+            margin-bottom: 2%;
+        }
+
+        .content_comodidades_txt {
+            font-size: 1vw;
+        }
+
+        .content_comodidades_txt {
+            width: 40%;
+            text-align: left;
+            margin-right: 2.5%;
+        }
+
+        .content_comodidades_img {
+            width: 60%;
+            margin-left: 2.5%
+        }
+
+        .content_comodidades_img img {
+            width: 100%;
+        }
+
+        .content_comodidades_internas_main {
+            margin-top: 50px;
+            margin-bottom: 75px;
+        }
+
+        .content_comodidades_internas_main h1 {
+            font-size: 2vw;
+        }
+
+        .content_comodidades_internas {
+            display: flex;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 25px;
+        }
+
+
+
+        .content_comodidades_internas_list {
+            width: 50%;
+            text-align: left;
+        }
+
+        .content_comodidades_internas_img {
+            width: 50%;
+        }
+
+        .content_comodidades_internas_img img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .content_tarifas {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid black;
+            margin-bottom: 150px;
+        }
+
+        .content_tarifas_img {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .content_tarifas_img img {
+            width: 100%;
+            
+        }
+
+
+        footer {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            float: right;
+            text-align: left;
+            margin-right: 10%;
+        }
+
+        .fale_conosco {
+            width: 100%;
+        }
+
+        .dv2_footer {
+            width: 50%;
+
+        }
+
+        .dv2_footer input {
+            margin-bottom: 5%;
+        }
+
+        .redes {
+            width: 80%;
+            display: inline-block;
+
+        }
+
+        .redes h4 {
+            top: 0;
+        }
+
+        .dv1_footer {
+            width: 50%;
+        }
+
+
+        .redes_wpp {
+
+            padding-left: auto;
+            padding-right: auto;
+            margin-right: 20px;
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_tele {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_email {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+
+        }
+
+        .redes_tel {
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes img {
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <header>
-            <nav>
-                <a href="Homepage.html"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg" width="10%"></a>
-                <a href="#">Indíce 1</a>
-                <a href="#">Indíce 2</a>
-                <a href="#">Indíce 3</a>
-                <a href="#">Indíce 4</a>
-                <a href="#">Indíce 5</a>
-            </nav>
-        </header>
-        <section>
-            <h1>Acomodações</h1>
-            <img src="./CSS/Imagens/Acomodações/Acomodações_inicio.jpg">
-            <p>No Walt Disney World, todo resort possuí seus quartos e suítes característicos, onde os visitantes podem
-                descansar, dormir, ou simplesmente relaxar num ambiente temático e aconchegante!</p>
-            
+        <section class="mainfake">
+            <header>
+                <nav>
+                    <a href="Homepage.html" id="logo"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg"></a>
+                    <ul>
+                        <li><a href="#">Indíce 1</a></li>
+                        <li><a href="#">Indíce 2</a></li>
+                        <li><a href="#">Indíce 3</a></li>
+                        <li><a href="#">Indíce 4</a></li>
+                        <li><a href="#">Indíce 5</a></li>
+                    </ul>
+                </nav>
+            </header>
         </section>
-        <br>
-        <section>
-            <h2>Quarto Standart The Little Mermaid</h2>
-            <img src="./CSS/Imagens/Acomodações/Acomodações_1.jpg">
-            <p>No quarto Standart The Little Marmaid, você se depara com um poco do universo da pequena sereia, e toda
-                sua
-                estética subaquática, com a paleta de cor perfeita para passar uma atmosfera completamente surreal,
-                remetendo a
-                diversas referências de um dos filmes com maior influência da Disney, e também possui vistas para o
-                pátio,
-                da
-                piscina ou do estacionamento. Contém 2 Queen Beds size, ou 1 King Bed Size.</p>
-            
+
+        <section class="content_intro_acomodacoes">
+            <section class="content_intro_acomodacoes_txt">
+                <h1>Acomodações</h1>
+                <p>No Walt Disney World, todo resort possuí seus quartos e suítes característicos, onde os visitantes
+                    podem descansar, dormir, ou simplesmente relaxar num ambiente temático e aconchegante!</p>
+            </section>
+            <section class="content_intro_acomodacoes_img">
+                <img src="./CSS/Imagens/Acomodações/Acomodações_inicio.jpg">
+            </section>
         </section>
-        <br>
-        <section>
-            <h2>Comodidades</h2>
-            <img src="./CSS/Imagens/Acomodações/Acomodações_Comdidaddes.jpg">
-            <p>Em cada quarto do Walt Disney Resort, possuí suas comodidades, que podem variar de quarto para quarto, e
-                essas
-                comodidades são itens inclusos dentro do pacote de compra do quarto.</p>         
-            <br>
-            <h2>Comodidades internas do quarto</h2>
-            <ul>
-                <li>Secador de cabelo;</li>
-                <li>Cofre no quarto;</li>
-                <li>Cafeteira;</li>
-                <li>Cafeteira;</li>
-                <li>Internet - serviço WiFi gratuito;</li>
-                <li>Telefone com correio de voz;</li>
-                <li>Ferro e tábua de passar roupas;</li>
-            </ul>
+
+        <section class="content_intro_quarto">
+            <section class="content_intro_quarto_img">
+                <img src="./CSS/Imagens/Acomodações/Acomodações_1.jpg">
+            </section>
+            <section class="content_intro_quarto_txt">
+                <h1>Quarto Standart The Little Mermaid</h1>
+                <p>No quarto Standart The Little Marmaid, você se depara com um poco do universo da pequena sereia, e
+                    toda sua estética subaquática, com a paleta de cor perfeita para passar uma atmosfera completamente
+                    surreal, remetendo a diversas referências de um dos filmes com maior influência da Disney, e também
+                    possui vistas para o pátio, da piscina ou do estacionamento. Contém 2 Queen Beds size, ou 1 King Bed
+                    Size.</p>
+            </section>
         </section>
-        <br>
-        <section>
-            <h2>Tárifas</h2>
-            <p>E temos também as tarifas de cada quarto, que remetem ao preço por noite no Resort.</p>
-            <dl>
-                <dt>A partir de</dt>
-                <dd>R$1.181.61 Por noite com impostos da Flórida aplicáveis incluídos.</dd>
-            </dl>
+
+        <section class="mainfake_imgs_quartos">
+            <section class="content_imgs_quartos">
+                <h1>Fotos dos quartos</h1>
+                <section class="slides_imgs_quartos">
+
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos1" checked>
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos2">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos3">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos4">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos5">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos6">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos7">
+                    <input type="radio" name="slide_imgs_quartos" id="slide_imgs_quartos8">
+
+                    <section class="slide_imgs_quartos s_imgs_quartos1">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_1.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_2.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_3.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_4.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_5.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_6.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_7.jpg">
+                    </section>
+
+                    <section class="slide_imgs_quartos">
+                        <img src="./CSS/Imagens/Acomodações/Quarto_8.jpg">
+                    </section>
+                </section>
+
+            </section>
+            <section class="navigation_imgs_quartos">
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos1"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos2"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos3"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos4"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos5"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos6"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos7"></label>
+                <label class="bar_imgs_quartos" for="slide_imgs_quartos8"></label>
+
+            </section>
         </section>
+
+        <section class="content_comodidades">
+            <section class="content_comodidades_txt">
+                <section class="content_comodidades_title">
+                    <h1>Comodidades</h1>
+                </section>
+                <p>Em cada quarto do Walt Disney Resort, possuí suas comodidades, que podem variar de quarto para
+                    quarto, e essas comodidades são itens inclusos dentro do pacote de compra do quarto.</p>
+            </section>
+            <section class="content_comodidades_img">
+                <img src="./CSS/Imagens/Acomodações/Acomodações_Comdidaddes.jpg">
+            </section>
+        </section>
+        <section class="content_comodidades_internas_main">
+            <h1>Comodidades internas do quarto</h1>
+            <section class="content_comodidades_internas">
+                <section class="content_comodidades_internas_list">
+                    <ul>
+                        <li>Secador de cabelo;</li>
+                        <li>Cofre no quarto;</li>
+                        <li>Cafeteira;</li>
+                        <li>Frigobar;</li>
+                        <li>Internet - serviço WiFi gratuito;</li>
+                        <li>Telefone com correio de voz;</li>
+                        <li>Ferro e tábua de passar roupas;</li>
+                    </ul>
+                </section>
+                <section class="content_comodidades_internas_img">
+                    <img src="./CSS/Imagens/Acomodações/Comodidades_2.jpg">
+                </section>
+            </section>
+        </section>
+
+
+        <!---->
+
+
+        <section class="content_tarifas">
+            <h1>Tárifas</h1>
+            <section class="content_tarifas_img">
+                <img src="./CSS/Imagens/Acomodações/Comodidades_3.jpg">
+            </section>
+            <section class="content_tarifas_txt">
+                <p>E temos também as tarifas de cada quarto, que remetem ao preço por noite no Resort.</p>
+                <p> A partir de, R$1.181.61 Por noite com impostos da Flórida aplicáveis incluídos.</p>
+            </section>
+        </section>
+
+
+
+
+
         <footer>
-            <h3>Fale Conosco</h3>
-            <form>
-                <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui"></input>
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Insira seu email"></input>
-                <br><br>
-                <label>Telefone:</label>
-                <input type="number" placeholder="Insira seu telefone"></input>
-                <input type="submit" value="Enviar">
-            </form>
+            <section class="dv1_footer">
+                <section class="redes">
+
+                    <section class="redes_wpp">
+                        <h4>Whatsapp</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Whats.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tele">
+                        <h4>Telegram</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telegram.png" alt="">
+
+                    </section>
+
+                    <section class="redes_email">
+                        <h4>Email</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Email.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tel">
+                        <h4>Telefone</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telefone.png" alt="">
+
+                    </section>
+                </section>
+            </section>
+            <section class="dv2_footer">
+
+                <section class="fale_conosco">
+
+                    <form>
+                        <h3>Fale Conosco</h3>
+                        <label>Nome:</label>
+
+                        <input type="text" placeholder="Digite seu nome aqui"></input>
+
+                        <label>Email:</label>
+
+                        <input type="email" placeholder="Insira seu email"></input>
+
+                        <label>Telefone:</label>
+
+                        <input type="number" placeholder="Insira seu telefone"></input>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </section>
+            </section>
         </footer>
     </main>
 </body>
