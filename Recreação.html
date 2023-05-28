@@ -6,115 +6,729 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Of Animation - Recreação</title>
+    <link rel="icon" type="image/jpg" href="./CSS/Imagens/homepage/Logo/Disney_site_logo.png" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        h1 {
+            font-size: 1.5vw;
+        }
+
+        p {
+            font-size: 0.8vw;
+        }
+
+        li {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        h4 {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        main {
+            width: 90%;
+            display: flex;
+            margin-top: 105px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 105px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 100px 10px 10px 10px;
+        }
+
+
+        .mainfake {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+
+        header li {
+            list-style: none;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 13vh;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        nav ul li {
+            display: inline-flex;
+            padding: 0.5% 3%;
+            margin-right: -5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header ul {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            float: right;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li:hover {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        nav {
+            display: flex;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            width: 70%;
+            position: fixed;
+        }
+
+        #logo {
+            width: 20%;
+        }
+
+        a img {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+
+        .content_intro {
+            width: 80%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 75px;
+            margin-top: 50px;
+        }
+
+        
+
+        .content_intro_txt {
+            width: 37.5%;
+            text-align: left;
+            margin-right: 2.5%;
+        }
+
+        .content_intro_img {
+            width: 57.5%;
+            margin-left: 2.5%;
+        }
+
+        .content_intro_img img {
+            width: 100%;
+        }
+
+        .mainfake_piscina {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 575px;
+            margin-bottom: 75px;
+            margin-top: 75px;
+        }
+
+
+        .content {
+            height: 550px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        
+        .texto_carrosel {
+            width: 100%;
+            height: 60px;
+            margin-bottom: 50px;
+        }
+
+        .content .navigation {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bar {
+            width: 10%;
+            height: 10px;
+            border: 2px solid #000000;
+            margin: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .bar:hover {
+            background-color: #000000;
+        }
+
+        .mainfake_piscina input {
+            display: none;
+        }
+
+        .slides {
+            display: flex;
+            width: 400%;
+        }
+
+
+        .slide {
+            width: 25%;
+            transition: 0.6s;
+            height: 450px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 90%;
+        }
+
+        #slide1:checked~.s1 {
+            margin-left: 0;
+        }
+
+        #slide2:checked~.s1 {
+            margin-left: -25%;
+        }
+
+        #slide3:checked~.s1 {
+            margin-left: -50%;
+        }
+
+        #slide4:checked~.s1 {
+            margin-left: -75%;
+        }
+
+        .content_recreacoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        
+        .content_local_text {
+            width: 80%;
+            margin-bottom: 100px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .content_recreacoes_fogueira {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_fogueira img {
+            width: 45%;
+            margin-left: 10%;
+            height: 250px;
+            float: right;
+
+        }
+
+        .content_recreacoes_fogueira_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_filme {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_filme img {
+            width: 45%;
+            margin-right: 10%;
+            height: 250px;
+            float: right;
+
+        }
+
+        .content_recreacoes_filme_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_app {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_app img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-left: 10%;
+        }
+
+        .content_recreacoes_app_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_trilha {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+
+        }
+
+        .content_recreacoes_trilha img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-right: 10%;
+        }
+
+        .content_recreacoes_trilha_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_recreacoes_playground {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_playground img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-left: 10%;
+        }
+
+        .content_recreacoes_playground_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_arcade {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+
+        }
+
+        .content_recreacoes_arcade img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-right: 10%;
+        }
+
+        .content_recreacoes_arcade_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_pesca img {
+            width: 45%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        .content_pesca {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 150px;
+            margin-top: 75px;
+        }
+
+        
+
+
+        footer {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            float: right;
+            text-align: left;
+            margin-right: 10%;
+        }
+
+        .fale_conosco {
+            width: 100%;
+        }
+
+        .dv2_footer {
+            width: 50%;
+
+        }
+
+        .dv2_footer input {
+            margin-bottom: 5%;
+        }
+
+        .redes {
+            width: 80%;
+            display: inline-block;
+
+        }
+
+        .redes h4 {
+            top: 0;
+        }
+
+        .dv1_footer {
+            width: 50%;
+        }
+
+
+        .redes_wpp {
+
+            padding-left: auto;
+            padding-right: auto;
+            margin-right: 20px;
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_tele {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_email {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+
+        }
+
+        .redes_tel {
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes img {
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <header>
-            <nav>
-                <a href="Homepage.html"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg" width="10%"></a>
-                <a href="#">Indíce 1</a>
-                <a href="#">Indíce 2</a>
-                <a href="#">Indíce 3</a>
-                <a href="#">Indíce 4</a>
-                <a href="#">Indíce 5</a>
-            </nav>
-        </header>
-
-        <section>
-            <h1>Recreação</h1>
-            <img src="./CSS/Imagens/Recreação/art-of-animation-gallery09.webp">
-            <p>Nos Resors do Walt Disney World, existem atrações para todas as idades e público, para entreter tantos os
-                mais velhos, quanto também os mais novos, e no Art of Animation Resort não é diferente, veja algumas das
-                recreações a seguir!</p>
+        <section class="mainfake">
+            <header>
+                <nav>
+                    <a href="Homepage.html" id="logo"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg"></a>
+                    <ul>
+                        <li><a href="#">Indíce 1</a></li>
+                        <li><a href="#">Indíce 2</a></li>
+                        <li><a href="#">Indíce 3</a></li>
+                        <li><a href="#">Indíce 4</a></li>
+                        <li><a href="#">Indíce 5</a></li>
+                    </ul>
+                </nav>
+            </header>
         </section>
 
-        <section>
-            <h2>Recreações Existentes no Resort</h2>
+        <section class="content_intro">
+            <section class="content_intro_txt">
+                <h1>Recreações no Disney'Art Of Animation of Resort</h1>
+                <p>Nos Resors do Walt Disney World, existem atrações para todas as idades e público, para entreter
+                    tantos os
+                    mais velhos, quanto também os mais novos, e no Art of Animation Resort não é diferente, veja algumas
+                    das
+                    recreações a seguir!</p>
+            </section>
+            <section class="content_intro_img">
+                <img src="./CSS/Imagens/Recreação/art-of-animation-gallery09.webp">
+            </section>
+        </section>
 
-            <h2>Piscinas no Disney's Art of Animation Resort</h2>
+        <section class="mainfake_piscina">
+            <section class="content">
 
-            <h3>The Big Blue Pool</h3>
-            <img src="./css/Imagens/Recreação/big-blue-pool.jpg">
-            <p>Sendo a maior piscina em um hotel do Walt Disney World Resort, The Big Blue Pool localizada no próprio
-                Art of Animation Resort, tem a temática do grande sucesso Procurando Nemo e com profundidade zero,
-                contém mais de 308.527 galões de água!</p>
-            <h3>Cozy Cone Pool</h3>
-            <img src="./CSS/Imagens/Recreação/art-of-animation-cozy-cone-pool.jpg">
-            <p>Se delite nas cabanas em forma de cone em volta da piscina do Cozy Cone Motel, com a temática do incrível
-                filme de carros falantes, Carros, e é um local ideal para todas as idades, trazendo toda a atmosfera
-                aconchegante da cidade de Radiator Springs.</p>
-            <h3>Flippin' Fins Pool</h3>
-            <img src="./CSS/Imagens/Recreação/Flippin-Fins-Pool.jpg">
-            <p>Pule nesse oceano de 103.642 galões de água, e vivencie a piscina Flippin' Fins Pool, com uma temática
-                incrível do filme A Pequena Sereia, que além de ser um habiente aquático maravilhoso, também conta com
-                peças baseadas nos personagens do filme, e também a famosa Uder the Sea Orchestra, regida pelo
-                Sebastian, personagem do filme.</p>
+                <section class="slides">
+
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    <input type="radio" name="slide" id="slide4">
+
+                    <section class="slide s1">
+                        <section class="texto_carrosel">
+                            <h1>Piscinas no Disney's Art of Animation Resort</h1>
+                            <p>O Disney's Art of Animation Resort possui três piscinas temáticas inspiradas em filmes
+                                da Disney: "Procurando Nemo", "Carros" e "A Pequena Sereia", além de uma piscina
+                                infantil interativa. É um destino ideal para famílias que procuram diversão e magia
+                                durante a estadia.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Recreação/Piscina_1.jpg">
+
+                    </section>
+
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>The Big Blue Pool</h1>
+                            <p>Sendo a maior piscina em um hotel do Walt Disney World Resort, The Big Blue Pool
+                                localizada no próprio
+                                Art of Animation Resort, tem a temática do grande sucesso Procurando Nemo e com
+                                profundidade zero,
+                                contém mais de 308.527 galões de água!</p>
+                        </section>
+                        <img src="./css/Imagens/Recreação/big-blue-pool.jpg" alt="">
+                    </section>
+
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>Cozy Cone Pool</h1>
+                            <p>Se delite nas cabanas em forma de cone em volta da piscina do Cozy Cone Motel, com a
+                                temática do incrível
+                                filme de carros falantes, Carros, e é um local ideal para todas as idades, trazendo
+                                toda a atmosfera
+                                aconchegante da cidade de Radiator Springs.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Recreação/art-of-animation-cozy-cone-pool.jpg" alt="">
+                    </section>
+
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>Flippin' Fins Pool</h1>
+                            <p>Pule nesse oceano de 103.642 galões de água, e vivencie a piscina Flippin' Fins Pool,
+                                com uma temática
+                                incrível do filme A Pequena Sereia, que além de ser um habiente aquático
+                                maravilhoso, também conta com
+                                peças baseadas nos personagens do filme, e também a famosa Uder the Sea Orchestra,
+                                regida pelo
+                                Sebastian, personagem do filme.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Recreação/Flippin-Fins-Pool.jpg" alt="">
+                    </section>
+
+                </section>
+
+            </section>
+
+            <section class="navigation">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <label class="bar" for="slide4"></label>
+            </section>
+
         </section>
-        <br>
-        <section>
-            <h2>Atividades ao lado da fogueira no Art of Animation</h2>
-            <img src="./CSS/Imagens/Recreação/Fogueira.jpeg">
-            <p>Após o pôr do sol, se junte com a familía e de moda antiga, cerque uma fogueira enquanto assa
-                marshmallows</p>
-            <p>Localizado perto do Pride Rock, das 18h30 às 19h30 todos os dias.</p>
+
+        <!---->
+
+        <section id="ind1" class="content_recreacoes">
+            <section class="content_recreacoes_fogueira">
+                <section class="content_recreacoes_fogueira_text">
+                    <h1>Atividades ao lado da fogueira no Art of Animation</h1>
+                    <p>Após o pôr do sol, se junte com a familía e de moda antiga, cerque uma fogueira enquanto assa
+                        marshmallows! Localizado perto do Pride Rock, das 18h30 às 19h30 todos os dias.</p>
+                </section>
+                <img src="./CSS/Imagens/Recreação/Fogueira.jpeg">
+            </section>
+
+            <section id="ind2" class="content_recreacoes_filme">
+                <img src="./CSS/Imagens/Recreação/movies-under-the-stars-00.jpeg">
+                <section class="content_recreacoes_filme_text">
+                    <h1>Filme sob as Estrelas</h1>
+                    <p>Deguste o momento de assistir seus filmes preferidos da Disney ao ar livre, com o céu estrelado.
+                        Localizado na Big Blue Pool, às 20h30 todas as noites.</p>
+
+                </section>
+            </section>
+
+            <section id="ind3" class="content_recreacoes_app">
+                <section class="content_recreacoes_app_text">
+                    <h1>Novas diversões com o aplicativo Play Disney</h1>
+                    <p>Se diveirta e vivencie as histórias clássicas da Disney na palma da sua mão no Disney's Art of
+                        Animation
+                        Resort!</p>
+                </section>
+                <img src="./CSS/Imagens/Recreação/Disney_app.png">
+            </section>
+
+            <section id="ind4" class="content_recreacoes_trilha">
+                <img src="./CSS/Imagens/Recreação/Trilha.jpg">
+                <section class="content_recreacoes_trilha_text">
+                    <h1>Trilhas para corrida</h1>
+                    <p>Corra ou caminhe por uma trilha temática e encantadora de 1,38 milhas de extensão pelo Disney's
+                        Art of
+                        Animation.</p>
+                </section>
+            </section>
+
+            <section class="content_recreacoes_playground">
+                <section class="content_recreacoes_playground_text">
+                    <h1>Playground</h1>
+                    <p>As crianças também possuem seu espaço para se divertirem sem ver o tempo passar, no playground
+                        Righteous
+                        Reef, localizado no Finding Nemo Courtyard.</p>
+                </section>
+                <img src="./CSS/Imagens/Recreação/Playground.jpg">
+            </section>
+
+            <section id="ind2" class="content_recreacoes_arcade">
+                <img src="./CSS/Imagens/Recreação/pixel-play-arcade.jpg">
+                <section class="content_recreacoes_arcade_text">
+                    <h1>Pixel Play Arcade</h1>
+                    <p>Aqui a velha e nova guarda se juntam para se divertir com os videogames clássicos ou atuais,
+                        neste salão
+                        de jogos de fliperama, localizado no Animation Hall.</p>
+                </section>
+            </section>
         </section>
-        <br>
-        <section>
-            <h2>Filme sob as Estrelas</h2>
-            <img src="./CSS/Imagens/Recreação/movies-under-the-stars-00.jpeg">
-            <p>Deguste o momento de assistir seus filmes preferidos da Disney ao ar livre, com o céu estrelado.</p>
-            <p>Localizado na Big Blue Pool, às 20h30 todas as noites.</p>
-        </section>
-        <br>
-        <section>
-            <h2>Novas diversões com o aplicativo Play Disney</h2>
-            <img src="./CSS/Imagens/Recreação/Disney_app.png">
-            <p>Se diveirta e vivencie as histórias clássicas da Disney na palma da sua mão no Disney's Art of Animation
-                Resort!</p>
-        </section>
-        <br>
-        <section>
-            <h2>Trilhas para corrida</h2>
-            <img src="./CSS/Imagens/Recreação/Trilha.jpg">
-            <p>Corra ou caminhe por uma trilha temática e encantadora de 1,38 milhas de extensão pelo Disney's Art of
-                Animation.</p>
-        </section>
-        <br>
-        <section>
-            <h2>Playground</h2>
-            <img src="./CSS/Imagens/Recreação/Playground.jpg">
-            <p>As crianças também possuem seu espaço para se divertirem sem ver o tempo passar, no playground Righteous
-                Reef, localizado no Finding Nemo Courtyard.</p>
-        </section>
-        <br>
-        <section>
-            <h2>Pixel Play Arcade</h2>
-            <img src="./CSS/Imagens/Recreação/pixel-play-arcade.jpg">
-            <p>Aqui a velha e nova guarda se juntam para se divertir com os videogames clássicos ou atuais, neste salão
-                de jogos de fliperama, localizado no Animation Hall.</p>
-        </section>
-        <br>
-        <section>
-            <h2>Pesca Esportiva</h2>
+
+        <!---->
+
+        <section class="content_pesca">
             <img src="./CSS/Imagens/Recreação/Pesca.jpg">
-            <p>No Hourglass Lake, é proíbido a pesca, porém você vai se divertir abessa com a pesca esportiva nas
-                marinas próximas!</p>
+            <section class="pesca_texto">
+                <h1>Pesca Esportiva</h1>
+                <p>No Hourglass Lake, é proíbido a pesca, porém você vai se divertir com a pesca esportiva nas
+                    marinas próximas!</p>
+            </section>
         </section>
 
         <footer>
-            <h3>Fale Conosco</h3>
-            <form>
-                <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui"></input>
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Insira seu email"></input>
-                <br><br>
-                <label>Telefone:</label>
-                <input type="number" placeholder="Insira seu telefone"></input>
-                <input type="submit" value="Enviar">
-            </form>
+            <section class="dv1_footer">
+                <section class="redes">
+
+                    <section class="redes_wpp">
+                        <h4>Whatsapp</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Whats.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tele">
+                        <h4>Telegram</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telegram.png" alt="">
+
+                    </section>
+
+                    <section class="redes_email">
+                        <h4>Email</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Email.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tel">
+                        <h4>Telefone</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telefone.png" alt="">
+
+                    </section>
+                </section>
+            </section>
+            <section class="dv2_footer">
+
+                <section class="fale_conosco">
+
+                    <form>
+                        <h3>Fale Conosco</h3>
+                        <label>Nome:</label>
+
+                        <input type="text" placeholder="Digite seu nome aqui"></input>
+
+                        <label>Email:</label>
+
+                        <input type="email" placeholder="Insira seu email"></input>
+
+                        <label>Telefone:</label>
+
+                        <input type="number" placeholder="Insira seu telefone"></input>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </section>
+            </section>
         </footer>
     </main>
 </body>
