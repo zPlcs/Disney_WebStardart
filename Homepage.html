@@ -6,368 +6,2326 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disney - Home</title>
+    <link rel="icon" type="image/jpg" href="./CSS/Imagens/homepage/Logo/Disney_site_logo.png" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        /*------------*/
+        /*
+         For Desktop 
+        */
+        /*------------*/
+        @media screen and (min-width: 600px) {
+
+            h1 {
+                font-size: 1.5vw;
+            }
+
+            p {
+                font-size: 0.8vw;
+            }
+
+            li {
+                font-size: 1vw;
+                white-space: nowrap;
+            }
+
+            h4 {
+                font-size: 1vw;
+                white-space: nowrap;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+
+            main {
+                width: 90%;
+                display: flex;
+                margin-top: 105px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 105px;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 100px 10px 10px 10px;
+            }
+
+
+            .mainfake {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 575px;
+                margin-bottom: 25px;
+            }
+
+            /* - Divisão - */
+
+            li {
+                list-style: none;
+
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                height: 13vh;
+                background-color: rgb(255, 255, 255);
+            }
+
+
+            nav ul li {
+                display: inline-flex;
+                padding: 0.5% 3%;
+                margin-right: -5px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            header ul {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 0;
+                width: 100%;
+                display: flex;
+                float: right;
+            }
+
+            li a {
+                text-decoration: none;
+                color: black;
+
+            }
+
+            nav ul li:hover {
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+            }
+
+            nav {
+            display: flex;
+            justify-content: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            width: 70%;
+            position: fixed;
+        }
+
+            #logo {
+                width: 20%;
+            }
+
+            a img {
+                padding-top: 2px;
+                padding-bottom: 2px;
+                width: 100%;
+            }
+
+            /* - Divisão - */
+
+            .content {
+                height: 550px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel {
+                width: 100%;
+                height: 75px;
+                margin-bottom: 50px;
+            }
+
+            .content .navigation {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar:hover {
+                background-color: #000000;
+            }
+
+            .mainfake input {
+                display: none;
+            }
+
+            .slides {
+                display: flex;
+                width: 500%;
+            }
+
+
+            .slide {
+                width: 20%;
+                transition: 0.6s;
+                height: 450px;
+            }
+
+            .slide img {
+                width: 100%;
+                height: 90%;
+            }
+
+            #slide1:checked~.s1 {
+                margin-left: 0;
+            }
+
+            #slide2:checked~.s1 {
+                margin-left: -20%;
+            }
+
+            #slide3:checked~.s1 {
+                margin-left: -40%;
+            }
+
+            #slide4:checked~.s1 {
+                margin-left: -60%;
+            }
+
+            #slide5:checked~.s1 {
+                margin-left: -80%;
+            }
+
+            /* - Divisão - */
+
+            .content_local {
+                width: 100%;
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+            .content_local img {
+                width: 80%;
+                height: 500px;
+            }
+
+            .content_local_text {
+                width: 80%;
+                margin-bottom: 50px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+            /* - Divisão - */
+
+            .content_parques {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+
+
+            .content_magic {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 75px;
+                margin-bottom: 50px;
+            }
+
+            .content_magic img {
+                width: 45%;
+                margin-left: 10%;
+                height: 250px;
+                float: right;
+            }
+
+            .content_magic_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_epcot {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_epcot img {
+                width: 45%;
+                margin-right: 10%;
+                height: 250px;
+                float: right;
+            }
+
+            .content_epcot_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_hollywood {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_hollywood img {
+                width: 45%;
+                height: 250px;
+                float: right;
+                margin-left: 10%;
+            }
+
+            .content_hollywood_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_animal {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+            }
+
+            .content_animal img {
+                width: 45%;
+                height: 250px;
+                float: right;
+                margin-right: 10%;
+            }
+
+            .content_animal_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_art {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 560px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_art {
+                height: 535px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel_art {
+                width: 100%;
+                height: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_art .navigation_art {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_art {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_art {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_art:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_art input {
+                display: none;
+            }
+
+            .slides_art {
+                display: flex;
+                width: 300%;
+            }
+
+
+            .slide_art {
+                width: 33.33%;
+                transition: 0.6s;
+                height: 450px;
+            }
+
+            .slide_art img {
+                width: 100%;
+                height: 90%;
+
+            }
+
+            #slide_art1:checked~.s_art1 {
+                margin-left: 0;
+            }
+
+            #slide_art2:checked~.s_art1 {
+                margin-left: -33.33%;
+            }
+
+            #slide_art3:checked~.s_art1 {
+                margin-left: -66.66%;
+            }
+
+            .slide_art button {
+                width: 100%;
+            }
+
+            /* - Divisão - */
+
+            .content_aqua_main {
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+
+
+            .content_parq_aqua {
+                display: flex;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .content_parq_aqua_text {
+                margin-bottom: 50px;
+            }
+
+            .content_parq_aqua_typon {
+                text-align: left;
+                width: 40%;
+                float: right;
+
+            }
+
+            .content_parq_aqua_typon img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .content_parq_aqua_typon_text {
+                margin-top: 15px;
+            }
+
+            .content_parq_aqua_blizzard {
+                text-align: left;
+                width: 40%;
+                float: left;
+                margin-left: 20%;
+            }
+
+
+            .content_parq_aqua_blizzard img {
+                width: 100%;
+                height: 300px;
+            }
+
+            .content_parq_aqua_blizzard_text {
+                margin-top: 15px;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_ds {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 650px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+
+
+            .content_ds {
+                height: 625px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel_ds {
+                width: 100%;
+                height: 150px;
+            }
+
+            .content_ds .navigation_ds {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_ds {
+                width: 40%;
+                height: 12%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_ds {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_ds:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_ds input {
+                display: none;
+            }
+
+            .slides_ds {
+                display: flex;
+                width: 600%;
+            }
+
+
+            .slide_ds {
+                width: 16.66%;
+                transition: 0.6s;
+                height: 400px;
+
+            }
+
+            .slide_ds img {
+                width: 100%;
+                height: 90%;
+                margin-top: 50px;
+            }
+
+            #slide_ds1:checked~.s_ds1 {
+                margin-left: 0;
+            }
+
+            #slide_ds2:checked~.s_ds1 {
+                margin-left: -16.66%;
+            }
+
+            #slide_ds3:checked~.s_ds1 {
+                margin-left: -33.32%;
+            }
+
+            #slide_ds4:checked~.s_ds1 {
+                margin-left: -49.98%;
+            }
+
+            #slide_ds5:checked~.s_ds1 {
+                margin-left: -66.64%;
+            }
+
+            #slide_ds6:checked~.s_ds1 {
+                margin-left: -83.3%;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_vant {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 550px;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_vant {
+                height: 525px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+
+
+            .texto_carrosel_vant {
+                width: 100%;
+                height: 100px;
+            }
+
+            .content_vant .navigation_vant {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_vant {
+                width: 40%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_vant {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_vant:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_vant input {
+                display: none;
+            }
+
+            .slides_vant {
+                display: flex;
+                width: 800%;
+            }
+
+
+            .slide_vant {
+                width: 12.5%;
+                transition: 0.6s;
+                height: 450px;
+
+            }
+
+            .slide_vant img {
+                width: 100%;
+                height: 90%;
+            }
+
+            #slide_vant1:checked~.s_vant1 {
+                margin-left: 0;
+            }
+
+            #slide_vant2:checked~.s_vant1 {
+                margin-left: -12.5%;
+            }
+
+            #slide_vant3:checked~.s_vant1 {
+                margin-left: -25%;
+            }
+
+            #slide_vant4:checked~.s_vant1 {
+                margin-left: -37.5%;
+            }
+
+            #slide_vant5:checked~.s_vant1 {
+                margin-left: -50%;
+            }
+
+            #slide_vant6:checked~.s_vant1 {
+                margin-left: -62.5%;
+            }
+
+            #slide_vant7:checked~.s_vant1 {
+                margin-left: -75%;
+            }
+
+            #slide_vant8:checked~.s_vant1 {
+                margin-left: -87.5%;
+            }
+
+            .slide_vant button {
+                width: 100%;
+            }
+
+            /* - Divisão - */
+
+            footer {
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+
+            footer form {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                float: right;
+                text-align: left;
+                margin-right: 10%;
+            }
+
+            .fale_conosco {
+                width: 100%;
+            }
+
+            .dv2_footer {
+                width: 50%;
+
+            }
+
+            .dv2_footer input {
+                margin-bottom: 5%;
+            }
+
+            .redes {
+                width: 80%;
+                display: inline-block;
+            }
+
+
+
+            .dv1_footer {
+                width: 50%;
+            }
+
+
+            .redes_wpp {
+                padding-left: auto;
+                padding-right: auto;
+                margin-right: 20px;
+                width: 22%;
+                height: 100%;
+                display: inline-block;
+
+            }
+
+            .redes_tele {
+                width: 22%;
+                height: 100%;
+                display: inline-block;
+
+            }
+
+            .redes_email {
+                width: 22%;
+                height: 100%;
+                display: inline-block;
+
+
+            }
+
+            .redes_tel {
+                width: 22%;
+                height: 100%;
+                display: inline-block;
+            }
+
+            .redes img {
+                width: 50%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+
+            /*
+
+.content_vant h1 {
+                font-size: 2vw;
+            }
+
+            .content_vant p {
+                font-size: 1.1vw;
+            }
+
+            .content h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content p {
+                font-size: 1.1vw;
+            }
+
+            li {
+                font-size: 15px;
+                width: 20%;
+            }
+
+            .content_local h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content_local p {
+                font-size: 1.1vw;
+            }
+
+            .content_parques h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content_parques p {
+                font-size: 1.1vw;
+            }
+
+            .content_parques h3 {
+                font-size: 1.5vw;
+            }
+
+            .content_art h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content_art p {
+                font-size: 1.1vw;
+            }
+
+            
+
+            .content_aqua_main h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content_aqua_main h2 {
+                font-size: 1.5vw;
+            }
+
+            .content_aqua_main p {
+                font-size: 1.1vw;
+            }
+            
+            .content_ds h1 {
+                font-size: 2vw;
+                margin-bottom: 25px;
+            }
+
+            .content_ds p {
+                font-size: 1.1vw;
+            }
+*/
+        }
+
+        /*------------*/
+        /*
+         For Desktop 
+        */
+        /*------------*/
+
+        /* - - - - - - - - - - */
+
+        /*------------*/
+        /*
+         For Mobile
+        */
+        /*------------*/
+
+        @media screen and (max-width: 600px) {
+            p {
+                font-size: 3vw;
+            }
+
+            h1 {
+                font-size: 4vw;
+            }
+
+            h2 {
+                font-size: 3.5vw;
+            }
+
+            h3 {
+                font-size: 3.5vw;
+            }
+
+            li {
+                font-size: 8px;
+            }
+
+            h4 {
+                font-size: 2vw;
+            }
+
+
+
+            /*
+            .content h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content p {
+                font-size: 3.5vw;
+            }
+
+            li {
+                font-size: 2vw;
+                width: 20%;
+
+            }
+
+            .content_local h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content_local p {
+                font-size: 3.5vw;
+            }
+
+            .content_parques h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content_parques h3 {
+                font-size: 4vw;
+                margin-bottom: 10px;
+            }
+
+            .content_parques p {
+                font-size: 3vw;
+            }
+
+            .content_art h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content_art p {
+                font-size: 3vw;
+            }
+
+            
+
+            .content_aqua_main h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content_aqua_main h2 {
+                font-size: 4vw;
+            }
+
+            .content_aqua_main p {
+                font-size: 3vw;
+            }
+
+            .content_ds h1 {
+                font-size: 5vw;
+                margin-bottom: 25px;
+            }
+
+            .content_ds p {
+                font-size: 3vw;
+            }
+*/
+
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+
+            main {
+                width: 90%;
+                display: flex;
+                margin-top: 75px;
+                margin-left: auto;
+                margin-right: auto;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+
+            .mainfake {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 325px;
+                margin-bottom: 25px;
+            }
+
+            /* - Divisão - */
+
+            li {
+                list-style: none;
+
+            }
+
+            header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                width: 100%;
+                top: 0;
+                height: 75px;
+                background-color: rgb(255, 255, 255);
+            }
+
+
+            nav ul li {
+                display: inline-flex;
+                padding: 0.5% 3%;
+                margin-right: -5px;
+            }
+
+            ul {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 0;
+                width: 70%;
+                display: flex;
+            }
+
+            li a {
+                text-decoration: none;
+                color: black;
+
+            }
+
+            nav ul li:hover {
+                border-top: 2px solid black;
+                border-bottom: 2px solid black;
+            }
+
+            nav {
+                display: flex;
+                padding-top: 1%;
+                padding-bottom: 1%;
+                width: 70%;
+                position: fixed;
+            }
+
+            #logo {
+                width: 30%;
+            }
+
+            a img {
+                padding-top: 2px;
+                padding-bottom: 2px;
+                width: 90%;
+            }
+
+            /* - Divisão - */
+
+            .content {
+                height: 300px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel {
+                width: 100%;
+                height: 150px;
+
+            }
+
+            .content .navigation {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation {
+                width: 80%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar {
+                width: 20%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar:hover {
+                background-color: #000000;
+            }
+
+            .mainfake input {
+                display: none;
+            }
+
+            .slides {
+                display: flex;
+                width: 500%;
+            }
+
+
+            .slide {
+                width: 20%;
+                transition: 0.6s;
+
+            }
+
+            .slide img {
+                width: 100%;
+                height: 35%;
+                margin-bottom: 50px;
+            }
+
+            #slide1:checked~.s1 {
+                margin-left: 0;
+            }
+
+            #slide2:checked~.s1 {
+                margin-left: -20%;
+            }
+
+            #slide3:checked~.s1 {
+                margin-left: -40%;
+            }
+
+            #slide4:checked~.s1 {
+                margin-left: -60%;
+            }
+
+            #slide5:checked~.s1 {
+                margin-left: -80%;
+            }
+
+            /* - Divisão - */
+
+            .content_local {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            .content_local img {
+                width: 80%;
+                height: 35%;
+            }
+
+            .content_local_text {
+                width: 80%;
+                margin-bottom: 50px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+            /* - Divisão - */
+
+            .content_parques {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+
+
+            .content_magic {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 75px;
+                margin-bottom: 50px;
+            }
+
+            .content_magic img {
+                width: 45%;
+                margin-left: 10%;
+                height: 250px;
+                float: right;
+            }
+
+            .content_magic_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_epcot {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_epcot img {
+                width: 45%;
+                margin-right: 10%;
+                height: 250px;
+                float: right;
+            }
+
+            .content_epcot_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_hollywood {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .content_hollywood img {
+                width: 45%;
+                height: 250px;
+                float: right;
+                margin-left: 10%;
+            }
+
+            .content_hollywood_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            .content_animal {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+                margin-top: 50px;
+            }
+
+            .content_animal img {
+                width: 45%;
+                height: 250px;
+                float: right;
+                margin-right: 10%;
+            }
+
+            .content_animal_text {
+                text-align: left;
+                width: 45%;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_art {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 385px;
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+            .content_art {
+                height: 365px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel_art {
+                width: 100%;
+                height: 50px;
+                margin-bottom: 100px;
+            }
+
+            .content_art .navigation_art {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_art {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_art {
+                width: 8%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_art:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_art input {
+                display: none;
+            }
+
+            .slides_art {
+                display: flex;
+                width: 300%;
+            }
+
+
+            .slide_art {
+                width: 33.33%;
+                transition: 0.6s;
+                height: 450px;
+            }
+
+            .slide_art img {
+                width: 100%;
+                height: 35%;
+
+            }
+
+            #slide_art1:checked~.s_art1 {
+                margin-left: 0;
+            }
+
+            #slide_art2:checked~.s_art1 {
+                margin-left: -33.33%;
+            }
+
+            #slide_art3:checked~.s_art1 {
+                margin-left: -66.66%;
+            }
+
+            .slide_art button {
+                width: 100%;
+            }
+
+            /* - Divisão - */
+
+            .content_aqua_main {
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+
+
+            .content_parq_aqua {
+                display: flex;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .content_parq_aqua_text {
+                margin-bottom: 50px;
+            }
+
+            .content_parq_aqua_typon {
+                text-align: left;
+                width: 40%;
+                float: right;
+
+            }
+
+            .content_parq_aqua_typon img {
+                width: 100%;
+                height: 10%;
+            }
+
+            .content_parq_aqua_typon_text {
+                margin-top: 15px;
+            }
+
+            .content_parq_aqua_blizzard {
+                text-align: left;
+                width: 40%;
+                float: left;
+                margin-left: 20%;
+            }
+
+
+            .content_parq_aqua_blizzard img {
+                width: 100%;
+                height: 10%;
+            }
+
+            .content_parq_aqua_blizzard_text {
+                margin-top: 15px;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_ds {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 525px;
+                margin-top: 75px;
+                margin-bottom: 75px;
+            }
+
+            .content_ds {
+                height: 500px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .texto_carrosel_ds {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 100px;
+            }
+
+            .content_ds .navigation_ds {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_ds {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_ds {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_ds:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_ds input {
+                display: none;
+            }
+
+            .slides_ds {
+                display: flex;
+                width: 600%;
+            }
+
+
+            .slide_ds {
+                width: 16.66%;
+                transition: 0.6s;
+                height: 400px;
+
+            }
+
+            .slide_ds img {
+                width: 100%;
+                height: 35%;
+                margin-top: 50px;
+            }
+
+            #slide_ds1:checked~.s_ds1 {
+                margin-left: 0;
+            }
+
+            #slide_ds2:checked~.s_ds1 {
+                margin-left: -16.66%;
+            }
+
+            #slide_ds3:checked~.s_ds1 {
+                margin-left: -33.32%;
+            }
+
+            #slide_ds4:checked~.s_ds1 {
+                margin-left: -49.98%;
+            }
+
+            #slide_ds5:checked~.s_ds1 {
+                margin-left: -66.64%;
+            }
+
+            #slide_ds6:checked~.s_ds1 {
+                margin-left: -83.3%;
+            }
+
+            /* - Divisão - */
+
+            .mainfake_vant {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 375px;
+                margin-top: 50px;
+                margin-bottom: 200px;
+            }
+
+            .content_vant {
+                height: 350px;
+                width: 100%;
+                overflow: hidden;
+            }
+
+            .content_vant h1 {
+                font-size: 5vw;
+            }
+
+            .content_vant p {
+                font-size: 3vw;
+            }
+
+            .texto_carrosel_vant {
+                width: 100%;
+                height: 125px;
+                margin-bottom: 50px;
+            }
+
+            .content_vant .navigation_vant {
+                display: flex;
+                justify-content: center;
+            }
+
+            .navigation_vant {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .bar_vant {
+                width: 10%;
+                height: 10px;
+                border: 2px solid #000000;
+                margin: 6px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: .3s;
+            }
+
+            .bar_vant:hover {
+                background-color: #000000;
+            }
+
+            .mainfake_vant input {
+                display: none;
+            }
+
+            .slides_vant {
+                display: flex;
+                width: 800%;
+            }
+
+
+            .slide_vant {
+                width: 12.5%;
+                transition: 0.6s;
+                height: 450px;
+
+            }
+
+            .slide_vant img {
+                width: 100%;
+                height: 35%;
+            }
+
+            #slide_vant1:checked~.s_vant1 {
+                margin-left: 0;
+            }
+
+            #slide_vant2:checked~.s_vant1 {
+                margin-left: -12.5%;
+            }
+
+            #slide_vant3:checked~.s_vant1 {
+                margin-left: -25%;
+            }
+
+            #slide_vant4:checked~.s_vant1 {
+                margin-left: -37.5%;
+            }
+
+            #slide_vant5:checked~.s_vant1 {
+                margin-left: -50%;
+            }
+
+            #slide_vant6:checked~.s_vant1 {
+                margin-left: -62.5%;
+            }
+
+            #slide_vant7:checked~.s_vant1 {
+                margin-left: -75%;
+            }
+
+            #slide_vant8:checked~.s_vant1 {
+                margin-left: -87.5%;
+            }
+
+            .slide_vant button {
+                width: 100%;
+            }
+
+            /* - Divisão - */
+
+            footer {
+                height: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+            }
+
+            footer form {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                float: right;
+                text-align: left;
+                margin-right: 10%;
+            }
+
+            .fale_conosco {
+                width: 100%;
+
+            }
+
+            .dv2_footer {
+                width: 50%;
+
+            }
+
+            .dv2_footer input {
+                margin-bottom: 5%;
+            }
+
+            .redes {
+                width: 100%;
+                display: inline-block;
+            }
+
+
+
+            .dv1_footer {
+                width: 50%;
+            }
+
+
+            .redes_wpp {
+                margin-left: 10px;
+                width: 15%;
+                height: 100%;
+                display: inline-block;
+
+            }
+
+            .redes_tele {
+                margin-left: 10px;
+                width: 15%;
+                height: 100%;
+                display: inline-block;
+
+            }
+
+            .redes_email {
+                margin-left: 10px;
+                width: 15%;
+                height: 100%;
+                display: inline-block;
+
+
+            }
+
+            .redes_tel {
+                margin-left: 10px;
+                width: 15%;
+                height: 100%;
+                display: inline-block;
+            }
+
+            .redes img {
+                width: 100%;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        }
+
+        /*------------*/
+        /*
+         For Mobile
+        */
+        /*------------*/
+    </style>
 </head>
 
 <body>
     <main>
-        <header>
-            <nav>
-                <a href="Homepage.html"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg" width="10%"></a>
-                <a href="#">Indíce 1</a>
-                <a href="#">Indíce 2</a>
-                <a href="#">Indíce 3</a>
-                <a href="#">Indíce 4</a>
-                <a href="#">Indíce 5</a>
-            </nav>
-        </header>
+        <section class="mainfake">
+            <header>
+                <nav>
+                    <a href="Homepage.html" id="logo"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg"></a>
+                    <ul>
+                        <li><a href="#ind1">Walt Disney World</a></li>
+                        <li><a href="#ind2">Parques Temáticos</a></li>
+                        <li><a href="#ind3">Parques Aquáticos</a></li>
+                        <li><a href="#ind4">Art Of Animation</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section class="content">
+                <section class="slides">
 
-        <!-- Carrosel (INICIO)-->
-        <section>
-
-            <h1><strong>The Walt Disney World</strong></h1>
-            <img src="./CSS/Imagens/homepage/Main_Disney.jpg" width="100%">
-            <p>A <em>Walt Disney World</em> é um dos maiores e mais famosos complexos turísticos do mundo, localizado em
-                Bay
-                Lake e Lake
-                Buena Vista, na Flórida, Estados Unidos. Foi inaugurado em 1971, após anos de planejamento e construção
-                liderados
-                pelo próprio Walt Disney.</p>
+                    <input type="radio" name="slide" id="slide1" checked>
+                    <input type="radio" name="slide" id="slide2">
+                    <input type="radio" name="slide" id="slide3">
+                    <input type="radio" name="slide" id="slide4">
+                    <input type="radio" name="slide" id="slide5">
 
 
-            <h3>Sua história</h3>
-            <img src="./CSS/Imagens/homepage/Parque_Griffth.jpg" width="100%">
-            <p>Walt Disney teve a ideia de criar um parque temático depois de visitar o Parque Nacional de Griffith, em
-                Los
-                Angeles, em 1930. Ele criou a Disneyland na Califórnia, que se tornou um enorme sucesso e o levou a
-                começar
-                a
-                planejar um parque ainda maior na Flórida.</p>
+                    <section class="slide s1">
+                        <section class="texto_carrosel">
+                            <h1 id="ind1">The Walt Disney World</h1>
+                            <p>A Walt Disney World é um dos maiores e mais famosos complexos turísticos do mundo,
+                                localizado
+                                em Bay Lake e Lake Buena Vista, na Flórida, Estados Unidos. Foi inaugurado em 1971, após
+                                anos de planejamento e construção liderados pelo próprio Walt Disney.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Main_Disney.jpg" alt="">
 
+                    </section>
 
-            <h3>Walt Disney e seu legado</h3>
-            <img src="./CSS/Imagens/homepage/Walt_Disney.jpg" width="100%">
-            <p>Infelizmente, Walt Disney faleceu em 1966, antes que a construção do parque fosse concluída, mas seu
-                irmão
-                Roy
-                Disney e uma equipe dedicada de funcionários continuaram seu trabalho e, finalmente, abriram a Walt
-                Disney
-                World
-                em outubro de 1971.</p>
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>Sua história</h1>
+                            <p>Walt Disney teve a ideia de criar um parque temático depois de visitar o Parque Nacional
+                                de
+                                Griffith, em Los Angeles, em 1930. Ele criou a Disneyland na Califórnia, que se tornou
+                                um
+                                enorme sucesso e o levou a começar a planejar um parque ainda maior na Flórida.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Parque_Griffth.jpg" alt="">
+                    </section>
 
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>Walt Disney e seu legado</h1>
+                            <p>Infelizmente, Walt Disney faleceu em 1966, antes que a construção do parque fosse
+                                concluída, mas seu irmão Roy Disney e uma equipe dedicada de funcionários continuaram
+                                seu trabalho e, finalmente, abriram a Walt Disney World em outubro de 1971.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Walt_Disney.jpg" alt="">
+                    </section>
 
-            <h3>Atrações inéditas</h3>
-            <img src="./CSS/Imagens/homepage/The_Walt_Disney_World.jpg" width="100%">
-            <p>Desde então, o complexo cresceu para incluir quatro parques temáticos (Magic Kingdom, Epcot, Disney's
-                Hollywood
-                Studios e Disney's Animal Kingdom), dois parques aquáticos, inúmeros hotéis, restaurantes e lojas, além
-                de
-                outras atrações e entretenimento.</p>
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>Atrações inéditas</h1>
+                            <p>Desde então, o complexo cresceu para incluir quatro parques temáticos (Magic Kingdom,
+                                Epcot, Disney's Hollywood Studios e Disney's Animal Kingdom), dois parques aquáticos,
+                                inúmeros hotéis, restaurantes e lojas, além de outras atrações e entretenimento.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/The_Walt_Disney_World.jpg" alt="">
+                    </section>
 
+                    <section class="slide">
+                        <section class="texto_carrosel">
+                            <h1>O sucesso do Walt Disney World</h1>
+                            <p>A Walt Disney World é um destino turístico popular para famílias e fãs da Disney de todas
+                                as idades, atraindo milhões de visitantes todos os anos. É conhecido por suas atrações
+                                emocionantes, personagens icônicos, shows espetaculares e uma experiência imersiva que
+                                transporta os visitantes para mundos de fantasia e aventura.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Sucesso_disney.jpg" alt="">
+                    </section>
+                </section>
 
-            <h3>O sucesso do Walt Disney World</h3>
-            <img src="./CSS/Imagens/homepage/Sucesso_disney.jpg" width="100%">
-            <p>A Walt Disney World é um destino turístico popular para famílias e fãs da Disney de todas as idades,
-                atraindo
-                milhões de visitantes todos os anos. É conhecido por suas atrações emocionantes, personagens icônicos,
-                shows
-                espetaculares e uma experiência imersiva que transporta os visitantes para mundos de fantasia e
-                aventura.
-            </p>
+            </section>
+            <section class="navigation">
+                <label class="bar" for="slide1"></label>
+                <label class="bar" for="slide2"></label>
+                <label class="bar" for="slide3"></label>
+                <label class="bar" for="slide4"></label>
+                <label class="bar" for="slide5"></label>
+            </section>
 
-
-            <h2><strong>Localização do Walt Disney World</strong></h2>
-            <img src="./css/Imagens/homepage/Disney_map.PNG" width="100%">
-            <p>O Walt Disney World está localizado em Bay Lake e Lake Buena Vista, na Flórida, Estados Unidos. Ele fica
-                a
-                cerca
-                de
-                32 km a sudoeste de Orlando e a cerca de 122 km a leste de Tampa. O complexo abrange uma área de cerca
-                de
-                110
-                km²,
-                que inclui quatro parques temáticos, dois parques aquáticos, inúmeros hotéis, restaurantes, lojas e
-                outras
-                atrações
-                e entretenimento. O endereço físico do Walt Disney World é 1180 Seven Seas Drive, Lake Buena Vista, FL
-                32830,
-                EUA.</p>
         </section>
-        <!-- Carrosel (FIM)-->
-        <br>
-        <section>
-            <h2>Parques Temáticos</h2>
-
-            <h3>Magic Kingdom</h3>
-            <img src="./CSS/Imagens/homepage/Magic_Kingdom.jpeg" width="100%">
-            <p>É o mais antigo dos parques temáticos da Disney e é inspirado no parque original da Disneyland na
-                Califórnia.
-                Ele
-                é conhecido por seu icônico Castelo da Cinderela e por apresentar muitas das atrações e personagens
-                clássicos da
-                Disney.</p>
-            <br>
-            <h3>Epcot</h3>
-            <img src="./CSS/Imagens/homepage/EPCOT.jpeg" width="100%">
-            <p>É um parque temático que celebra a inovação e a cultura. Ele apresenta duas seções principais: Future
-                World,
-                que
-                apresenta atrações relacionadas à tecnologia, ciência e natureza, e o World Showcase, que apresenta
-                pavilhões
-                que representam diferentes países e culturas.</p>
-            <br>
-            <h3>Disney's Hollywood Studios</h3>
-            <img src="./CSS/Imagens/homepage/Hollywood_Studios.jpeg" width="100%">
-            <p>É um parque temático que celebra o mundo do entretenimento, com atrações baseadas em filmes e programas
-                de TV
-                da
-                Disney e de outras produtoras. Ele é conhecido por suas atrações emocionantes, incluindo a
-                montanha-russa da
-                Guerra nas Estrelas e a Tower of Terror.</p>
-            <br>
-            <h3>Disney's Animal Kingdom</h3>
-            <img src="./CSS/Imagens/homepage/Animal_Kingdom.jpeg" width="100%">
-            <p>É um parque temático que celebra a vida animal e a natureza. Ele apresenta atrações emocionantes,
-                incluindo
-                uma
-                safári em veículo aberto para ver animais exóticos, além de áreas temáticas baseadas em diferentes
-                regiões
-                do
-                mundo, como Ásia e África.</p>
-        </section>
-        <br>
-
-        <section>
-            <!-- Carrosel "Art of Animation" (INICIO) -->
-            <h2>Conheça o Art Of Animation Resort</h2>
-            <a href="Resort.html"><img src="./CSS/Imagens/homepage/Art_of_Animation_Resort_01.jpg" width="100%"></a>
-            <p>O Disney's Art of Animation Resort é um hotel temático localizado dentro do Walt Disney World Resort em
-                Orlando, Flórida. O resort foi inaugurado em 2012 e oferece quartos temáticos inspirados em quatro
-                filmes
-                populares da Disney e da Pixar: "Procurando Nemo", "O Rei Leão", "Carros" e "A Pequena Sereia".</p>
-            <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
-            <br>
-            <h3>As animações mais perto do que nunca</h2>
-                <a href="Resort.html"><img src="./CSS/Imagens/homepage/Art_of_Animation_Resort_02.jpg" width="100%"></a>
-                <p>O resort é conhecido por sua arquitetura colorida e vibrante, além de suas piscinas temáticas,
-                    restaurantes e
-                    áreas de lazer. Os hóspedes podem desfrutar de atividades como filmes ao ar livre, fogueiras, aulas
-                    de
-                    arte
-                    e recreação supervisionada para crianças.
-                </p>
-                <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
-                <br>
-                <h3>A essência da arte para todos</h3>
-                <a href="Resort.html"><img src="./CSS/Imagens/homepage/Art_of_animation4.jpg" width="100%"></a>
-                <p>O Art of Animation é uma opção popular para famílias e grupos que procuram uma experiência completa
-                    da
-                    Disney, com fácil acesso aos parques temáticos e outras atrações do Walt Disney World.</p>
-                <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
-                <!-- Carrosel "Art of Animation" (FIM) -->
-        </section>
-
-        <br>
-        <section>
-            <h2>Parques Aquáticos do <em>Walt Disney World</em></h2>
-            <h3>Disney's Typhoon Lagoon</h3>
-            <img src="./CSS/Imagens/homepage/Typon.jpeg" width="100%">
-            <p><em>Typhoon Lagoon</em> é um parque aquático temático que oferece uma grande diversidade de atrações
-                aquáticas, como uma enorme piscina de ondas, um rio calmo, toboáguas emocionantes e outras atividades. O
-                tema do
-                parque é baseado em uma ilha tropical que sofreu a devastação de um grande tufão.
-                <br>
-            <h3>Disney's Blizzard Beach</h3>
-            <img src="./CSS/Imagens/homepage/Blizzard_Beach.jpeg" width="100%">
-            <p><em>Blizzard Beach</em> é um parque aquático temático que oferece várias atividades aquáticas
-                emocionantes, como um toboágua em queda livre, um rio lento, uma piscina de ondas e outras opções. O
-                tema do
-                parque é baseado em uma estação de esqui que derreteu após uma grande nevasca.</p>
-        </section>
-        <br>
-        <section>
-            <h2>Disney Springs</h2>
-
-            <img src="./CSS/Imagens/homepage/Disney_Springs.jpg" width="100%">
-            <p> <em>Disney Springs</em> é uma área de compras, entretenimento e restaurantes localizada dentro do
-                <em>Walt
-                    Disney World Resort</em>,
-                na Flórida. Anteriormente conhecida como <em>Downtown Disney</em>, a área passou por uma grande reforma
-                e
-                renomeação em 2015,
-                recebendo o nome de <em>Disney Springs</em>.
-            </p>
-
-            <p>O Disney Springs é composto por quatro áreas principais:</p>
-            <dl>
-                
-                <h3>
-                    <dt>The Landing</dt>
-                </h3>
-                <img src="./CSS/Imagens/homepage/The_Landing_Disney_Springs.jpg" width="100%">
-                <dd>The Landing é uma das quatro áreas de Disney Springs e é projetada para parecer uma antiga vila
-                    ribeirinha da Flórida. A área é cercada por água e tem muitos restaurantes e lojas à beira do rio,
-                    incluindo o famoso restaurante Jock Lindsey's Hangar Bar. Os visitantes podem fazer um passeio de
-                    barco
-                    pela área ou desfrutar de uma bebida no bar da água. The Landing também abriga uma galeria de arte e
-                    uma
-                    loja de cerveja artesanal, bem como um bar e clube de comédia.</dd>
-
-                
-                <h3>
-                    <dt>Town Center</dt>
-                </h3>
-                <img src="./CSS/Imagens/homepage/Town_Center_Disney_Springs.jpg" width="100%">
-                <dd>Town Center é uma das quatro áreas de Disney Springs e é projetada para parecer uma cidade moderna e
-                    elegante. A área apresenta uma variedade de lojas, desde boutiques de alta moda até lojas de varejo
-                    populares. Os visitantes podem encontrar marcas famosas, como Sephora, Pandora e Zara, bem como
-                    lojas
-                    exclusivas da Disney, como a World of Disney. Town Center também oferece muitas opções de
-                    restaurantes,
-                    desde lanchonetes até restaurantes sofisticados, e uma fonte central espetacular que é um ponto de
-                    encontro popular. A área tem uma atmosfera vibrante e é ótima para um passeio descontraído e
-                    compras.
-                </dd>
-
-                
-                <h3>
-                    <dt>Marketplace</dt>
-                </h3>
-                <img src="./CSS/Imagens/homepage/marketplace_disney_springs2.jpg" width="100%">
-                <dd>Marketplace é uma das quatro áreas de Disney Springs e é projetada para parecer um bairro charmoso e
-                    pitoresco, com edifícios coloridos e uma atmosfera alegre. A área oferece muitas lojas exclusivas da
-                    Disney, como a loja de brinquedos World of Disney e a loja de fantasias Bibbidi Bobbidi Boutique. Os
-                    visitantes também podem encontrar muitas opções de restaurantes, como o famoso restaurante de frutos
-                    do
-                    mar Fulton's Crab House e o Rainforest Cafe, que tem uma decoração temática exótica. Marketplace
-                    também
-                    oferece atividades divertidas para toda a família, como uma sala de jogos e uma pista de boliche.
-                </dd>
-
-                
-                <h3>
-                    <dt>West Side</dt>
-                </h3>
-                <img src="./CSS/Imagens/homepage/West_Side_Disney_Springs.jpg" width="100%">
-                <dd>West Side é uma das quatro áreas de Disney Springs e é projetada para parecer um bairro urbano
-                    moderno,
-                    com uma variedade de entretenimento e opções de compras. A área apresenta o Cirque du Soleil e o AMC
-                    Dine-In Theater, que oferece refeições completas enquanto assiste a um filme. Os visitantes também
-                    podem
-                    desfrutar de música ao vivo no House of Blues, ou explorar as lojas especializadas em esportes, como
+        <!-- DIV -->
+        <section class="content_local">
+            <section class="content_local_text">
+                <h1>Localização do Walt Disney World</h1>
+                <p>O Walt Disney World está localizado em Bay Lake e Lake Buena Vista, na Flórida, Estados Unidos. Ele
+                    fica
                     a
-                    loja da NBA. West Side também oferece opções de refeições diversas, desde o churrasco texano do
-                    Bongos
-                    até o sushi sofisticado do Morimoto Asia. A área tem uma atmosfera vibrante e é ótima para passear e
-                    relaxar.</dd>
-            </dl>
-
-            <img src="#"> <!-- Fazer edição com as 4 areas juntas em uma -->
-            <p>Cada área tem um tema e estilo únicos, oferecendo aos visitantes uma grande variedade de lojas,
-                restaurantes,
-                bares e locais de entretenimento.</p>
-
-            <p>Além das compras e restaurantes, o Disney Springs oferece muitas opções de entretenimento, incluindo
-                cinemas,
-                shows
-                ao vivo, uma casa noturna e muitas outras atrações. Uma das atrações mais populares é o <em>Cirque du
-                    Soleil
-                    -
-                    La Nouba</em>,
-                que é um espetáculo de acrobacias, dança e teatro que ocorre no Disney Springs.</p>
-
-            <p>O Disney Springs é um destino popular para visitantes que desejam ter uma experiência diferente dos
-                parques
-                temáticos do Walt Disney World, mas ainda assim querem experimentar a magia e a diversão da Disney. A
-                área é
-                gratuita para visitar e estacionar, e oferece uma experiência de compras e entretenimento única em um
-                ambiente
-                vibrante e emocionante.</p>
+                    cerca
+                    de
+                    32 km a sudoeste de Orlando e a cerca de 122 km a leste de Tampa. O complexo abrange uma área de
+                    cerca
+                    de
+                    110
+                    km²,
+                    que inclui quatro parques temáticos, dois parques aquáticos, inúmeros hotéis, restaurantes, lojas e
+                    outras
+                    atrações
+                    e entretenimento. O endereço físico do Walt Disney World é 1180 Seven Seas Drive, Lake Buena Vista,
+                    FL
+                    32830,
+                    EUA.</p>
+            </section>
+            <img src="./CSS/Imagens/homepage/Disney_map2.PNG">
         </section>
-        <br>
-        <section>
-            <h2>Vantagens de ser um hóspede disney</h2>
-            <img src="./CSS/Imagens/homepage/Vantagens.jpg" width="100%">
-            <p> Há muitas vantagens em se hospedar em um dos hotéis da Disney durante a sua visita ao <em>Walt Disney
-                    World
-                    Resort.</em>
-                Algumas das vantagens incluem:</p>
-            <dl>
-                <img src="./CSS/Imagens/homepage/vantagens2.jpg" width="100%">
-                <dt><strong>Magic Hours</strong></dt>
-                <dd>
-                    Os hóspedes dos hotéis da Disney têm acesso a horas mágicas extras em
-                    determinados parques temáticos,
-                    permitindo que eles entrem nos parques antes ou fiquem depois do horário normal de funcionamento.
-                    Isso
-                    significa
-                    menos tempo nas filas e mais tempo aproveitando as atrações.
-                </dd>
+        <!-- DIV -->
+        <section class="content_parques">
+            <h1 id="ind2">Parques Temáticos</h1>
+            <section class="content_magic">
+                <section class="content_magic_text">
+                    <h3>Magic Kingdom</h3>
+                    <p>É o mais antigo dos parques temáticos da Disney e é inspirado no parque original da Disneyland na
+                        Califórnia.
+                        Ele
+                        é conhecido por seu icônico Castelo da Cinderela e por apresentar muitas das atrações e
+                        personagens
+                        clássicos da
+                        Disney.</p>
+                </section>
+                <img src="./CSS/Imagens/homepage/Magic_Kingdom.jpeg">
+            </section>
 
-                <img src="./CSS/Imagens/homepage/Transportes_Gratuítos.jpg" width="100%">
-                <dt><strong>Transporte gratuito</strong></dt>
-                <dd>
-                    Os hóspedes da Disney têm acesso gratuito aos ônibus, barcos e
-                    monotrilhos da Disney,
-                    permitindo que se locomovam facilmente entre os parques temáticos, hotéis e áreas de compras e
-                    entretenimento.
-                </dd>
+            <section class="content_epcot">
+                <img src="./CSS/Imagens/homepage/EPCOT.jpeg" width="100%">
+                <section class="content_epcot_text">
+                    <h3>Epcot</h3>
+                    <p>É um parque temático que celebra a inovação e a cultura. Ele apresenta duas seções principais:
+                        Future
+                        World,
+                        que
+                        apresenta atrações relacionadas à tecnologia, ciência e natureza, e o World Showcase, que
+                        apresenta
+                        pavilhões
+                        que representam diferentes países e culturas.</p>
+                </section>
+            </section>
 
-                <img src="./CSS/Imagens/homepage/Bagagem.jpg" width="100%">
-                <dt><strong>Serviço de transporte de bagagem</strong></dt>
-                <dd>
-                    Os hóspedes da Disney podem ter suas malas enviadas
-                    diretamente do aeroporto para
-                    o hotel e depois para o quarto, sem precisar se preocupar com o transporte de bagagem.
-                </dd>
+            <section class="content_hollywood">
+                <section class="content_hollywood_text">
+                    <h3>Disney's Hollywood Studios</h3>
+                    <p>É um parque temático que celebra o mundo do entretenimento, com atrações baseadas em filmes e
+                        programas
+                        de TV
+                        da
+                        Disney e de outras produtoras. Ele é conhecido por suas atrações emocionantes, incluindo a
+                        montanha-russa da
+                        Guerra nas Estrelas e a Tower of Terror.</p>
+                </section>
+                <img src="./CSS/Imagens/homepage/Hollywood_Studios.jpeg" width="100%">
+            </section>
 
-                <img src="./CSS/Imagens/homepage/Fast_Pass.jpg" width="100%">
-                <dt><strong>FastPass+</strong></dt>
-                <dd>
-                    Os hóspedes da Disney podem agendar suas reservas de FastPass+ com
-                    antecedência,
-                    permitindo que evitem as
-                    filas em até três atrações por dia.
-                </dd>
-
-                <img src="./CSS/Imagens/homepage/Quartos.jpeg" width="100%">
-                <dt><strong>Serviço de quarto gratuito</strong></dt>
-                <dd>
-                    Os hóspedes da Disney podem desfrutar do serviço de quarto
-                    gratuito durante toda a sua
-                    estadia.
-                </dd>
-
-                <img src="./CSS/Imagens/homepage/Entrada_Antecipada.jpg" width="100%">
-                <dt><strong>Entrada antecipada nos parques temáticos</strong></dt>
-                <dd>
-                    Os hóspedes da Disney têm acesso antecipado
-                    aos
-                    parques temáticos em dias
-                    selecionados, permitindo que entrem no parque antes que ele seja aberto ao público geral.
-                </dd>
-
-                <img src="./CSS/Imagens/homepage/Reservas_de_Restaurantes.jpg" width="100%">
-                <dt><strong>Reservas de restaurantes</strong></dt>
-                <dd>Os hóspedes da Disney podem fazer reservas em restaurantes
-                    populares com antecedência,
-                    garantindo que consigam um lugar em locais que costumam ficar lotados rapidamente.
-                </dd>
-                </ul>
+            <section class="content_animal">
+                <img src="./CSS/Imagens/homepage/Animal_Kingdom.jpeg" width="100%">
+                <section class="content_animal_text">
+                    <h3>Disney's Animal Kingdom</h3>
+                    <p>É um parque temático que celebra a vida animal e a natureza. Ele apresenta atrações emocionantes,
+                        incluindo
+                        uma
+                        safári em veículo aberto para ver animais exóticos, além de áreas temáticas baseadas em
+                        diferentes
+                        regiões
+                        do
+                        mundo, como Ásia e África.</p>
+                </section>
+            </section>
         </section>
+        <!-- DIV -->
+        <section class="mainfake_art">
+            <section class="content_art">
+                <section class="slides_art">
+
+                    <input type="radio" name="slide_art" id="slide_art1" checked>
+                    <input type="radio" name="slide_art" id="slide_art2">
+                    <input type="radio" name="slide_art" id="slide_art3">
+
+                    <section class="slide_art s_art1">
+                        <section class="texto_carrosel_art">
+                            <h1 id="ind4">Conheça o Art Of Animation Resort</h1>
+                            <p>O Disney's Art of Animation Resort é um hotel temático localizado dentro do Walt Disney
+                                World Resort em
+                                Orlando, Flórida. O resort foi inaugurado em 2012 e oferece quartos temáticos inspirados
+                                em quatro
+                                filmes
+                                populares da Disney e da Pixar: "Procurando Nemo", "O Rei Leão", "Carros" e "A Pequena
+                                Sereia".</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Art_of_Animation_Resort_01.jpg">
+                        <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
+                    </section>
+
+                    <section class="slide_art">
+                        <section class="texto_carrosel_art">
+                            <h1>As animações mais perto do que nunca</h1>
+                            <p>O resort é conhecido por sua arquitetura colorida e vibrante, além de suas piscinas
+                                temáticas,
+                                restaurantes e
+                                áreas de lazer. Os hóspedes podem desfrutar de atividades como filmes ao ar livre,
+                                fogueiras, aulas
+                                de
+                                arte
+                                e recreação supervisionada para crianças.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Art_of_Animation_Resort_02.jpg">
+                        <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
+                    </section>
+
+                    <section class="slide_art">
+                        <section class="texto_carrosel_art">
+                            <h1>A essência da arte para todos</h1>
+                            <p>O Art of Animation é uma opção popular para famílias e grupos que procuram uma
+                                experiência completa
+                                da
+                                Disney, com fácil acesso aos parques temáticos e outras atrações do Walt Disney World.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Art_of_animation4.jpg">
+                        <a href="Resort.html"><button>Confira Sobre mais sobre o Art of Animation Resort</button></a>
+                    </section>
+                </section>
+
+            </section>
+            <section class="navigation_art">
+                <label class="bar_art" for="slide_art1"></label>
+                <label class="bar_art" for="slide_art2"></label>
+                <label class="bar_art" for="slide_art3"></label>
+
+            </section>
+
+        </section>
+        <!--DIV-->
+        <section class="content_aqua_main">
+            <section class="content_parq_aqua_text">
+                <h1 id="ind3">Parques Aquáticos do <em>Walt Disney World</em></h1>
+            </section>
+            <section class="content_parq_aqua">
+
+                <section class="content_parq_aqua_typon">
+                    <img src="./CSS/Imagens/homepage/Typon.jpeg">
+                    <section class="content_parq_aqua_typon_text">
+                        <h2>Disney's Typhoon Lagoon</h2>
+                        <p><em>Typhoon Lagoon</em> é um parque aquático temático que oferece uma grande diversidade de
+                            atrações
+                            aquáticas, como uma enorme piscina de ondas, um rio calmo, toboáguas emocionantes e outras
+                            atividades. O
+                            tema do
+                            parque é baseado em uma ilha tropical que sofreu a devastação de um grande tufão.
+                    </section>
+                </section>
+                <section class="content_parq_aqua_blizzard">
+                    <img src="./CSS/Imagens/homepage/Blizzard_Beach.jpeg">
+                    <section class="content_parq_aqua_blizzard_text">
+                        <h2>Disney's Blizzard Beach</h2>
+                        <p><em>Blizzard Beach</em> é um parque aquático temático que oferece várias atividades aquáticas
+                            emocionantes, como um toboágua em queda livre, um rio lento, uma piscina de ondas e outras
+                            opções. O
+                            tema do
+                            parque é baseado em uma estação de esqui que derreteu após uma grande nevasca.</p>
+                    </section>
+                </section>
+            </section>
+        </section>
+        <!--DIV-->
+
+        <section class="mainfake_ds">
+            <section class="content_ds">
+                <section class="slides_ds">
+
+                    <input type="radio" name="slide_ds" id="slide_ds1" checked>
+                    <input type="radio" name="slide_ds" id="slide_ds2">
+                    <input type="radio" name="slide_ds" id="slide_ds3">
+                    <input type="radio" name="slide_ds" id="slide_ds4">
+                    <input type="radio" name="slide_ds" id="slide_ds5">
+                    <input type="radio" name="slide_ds" id="slide_ds6">
+
+                    <section class="slide_ds s_ds1">
+                        <section class="texto_carrosel_ds">
+                            <h1>Disney Springs</h1>
+                            <p> <em>Disney Springs</em> é uma área de compras, entretenimento e restaurantes localizada
+                                dentro do
+                                <em>Walt
+                                    Disney World Resort</em>,
+                                na Flórida. Anteriormente conhecida como <em>Downtown Disney</em>, a área passou por uma
+                                grande
+                                reforma
+                                e
+                                renomeação em 2015,
+                                recebendo o nome de <em>Disney Springs</em>.
+                            </p>
+
+                            <p>O Disney Springs é composto por quatro áreas principais:</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Disney_Springs.jpg">
+                    </section>
+
+                    <section class="slide_ds">
+                        <section class="texto_carrosel_ds">
+                            <h1>The Landing</h1>
+                            <p>The Landing é uma das quatro áreas de Disney Springs e é projetada para parecer uma
+                                antiga vila
+                                ribeirinha da Flórida. A área é cercada por água e tem muitos restaurantes e lojas à
+                                beira do
+                                rio,
+                                incluindo o famoso restaurante Jock Lindsey's Hangar Bar. Os visitantes podem fazer um
+                                passeio
+                                de
+                                barco
+                                pela área ou desfrutar de uma bebida no bar da água. The Landing também abriga uma
+                                galeria de
+                                arte e
+                                uma
+                                loja de cerveja artesanal, bem como um bar e clube de comédia.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/The_Landing_Disney_Springs.jpg">
+                    </section>
+
+                    <section class="slide_ds">
+                        <section class="texto_carrosel_ds">
+                            <h1>Town Center</h1>
+                            <p>Town Center é uma das quatro áreas de Disney Springs e é projetada para parecer uma
+                                cidade
+                                moderna e
+                                elegante. A área apresenta uma variedade de lojas, desde boutiques de alta moda até
+                                lojas de
+                                varejo
+                                populares. Os visitantes podem encontrar marcas famosas, como Sephora, Pandora e Zara,
+                                bem como
+                                lojas
+                                exclusivas da Disney, como a World of Disney. Town Center também oferece muitas opções
+                                de
+                                restaurantes,
+                                desde lanchonetes até restaurantes sofisticados, e uma fonte central espetacular que é
+                                um ponto
+                                de
+                                encontro popular. A área tem uma atmosfera vibrante e é ótima para um passeio
+                                descontraído e
+                                compras.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Town_Center_Disney_Springs.jpg">
+                    </section>
+
+                    <section class="slide_ds">
+                        <section class="texto_carrosel_ds">
+                            <h1>Marketplace</h1>
+                            <p>Marketplace é uma das quatro áreas de Disney Springs e é projetada para parecer um bairro
+                                charmoso e
+                                pitoresco, com edifícios coloridos e uma atmosfera alegre. A área oferece muitas lojas
+                                exclusivas da
+                                Disney, como a loja de brinquedos World of Disney e a loja de fantasias Bibbidi Bobbidi
+                                Boutique. Os
+                                visitantes também podem encontrar muitas opções de restaurantes, como o famoso
+                                restaurante de
+                                frutos
+                                do
+                                mar Fulton's Crab House e o Rainforest Cafe, que tem uma decoração temática exótica.
+                                Marketplace
+                                também
+                                oferece atividades divertidas para toda a família, como uma sala de jogos e uma pista de
+                                boliche.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/marketplace_disney_springs2.jpg">
+                    </section>
+
+                    <section class="slide_ds">
+                        <section class="texto_carrosel_ds">
+                            <h1>West Side</h1>
+                            <p>Marketplace é uma das quatro áreas de Disney Springs e é projetada para parecer um bairro
+                                charmoso e
+                                pitoresco, com edifícios coloridos e uma atmosfera alegre. A área oferece muitas lojas
+                                exclusivas da
+                                Disney, como a loja de brinquedos World of Disney e a loja de fantasias Bibbidi Bobbidi
+                                Boutique. Os
+                                visitantes também podem encontrar muitas opções de restaurantes, como o famoso
+                                restaurante de
+                                frutos
+                                do
+                                mar Fulton's Crab House e o Rainforest Cafe, que tem uma decoração temática exótica.
+                                Marketplace
+                                também
+                                oferece atividades divertidas para toda a família, como uma sala de jogos e uma pista de
+                                boliche.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/West_Side_Disney_Springs.jpg">
+                    </section>
+
+                    <section class="slide_ds">
+                        <section class="texto_carrosel_ds">
+                            <h1>Um lugar que junta o entretenimento, com a utilidade</h1>
+                            <p>Cada área tem um tema e estilo únicos, oferecendo aos visitantes uma grande variedade de
+                                lojas,
+                                restaurantes,
+                                bares e locais de entretenimento.</p>
+
+                            <p>Além das compras e restaurantes, o Disney Springs oferece muitas opções de
+                                entretenimento, incluindo
+                                cinemas,
+                                shows
+                                ao vivo, uma casa noturna e muitas outras atrações. Uma das atrações mais populares é o
+                                <em>Cirque
+                                    du
+                                    Soleil
+                                    -
+                                    La Nouba</em>,
+                                que é um espetáculo de acrobacias, dança e teatro que ocorre no Disney Springs.
+                            </p>
+
+                            <p>O Disney Springs é um destino popular para visitantes que desejam ter uma experiência
+                                diferente dos
+                                parques
+                                temáticos do Walt Disney World, mas ainda assim querem experimentar a magia e a diversão
+                                da Disney.
+                                A
+                                área é
+                                gratuita para visitar e estacionar, e oferece uma experiência de compras e
+                                entretenimento única em
+                                um
+                                ambiente
+                                vibrante e emocionante.</p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Wallpaper (1).png">
+                    </section>
+
+
+                </section>
+
+            </section>
+            <section class="navigation_ds">
+                <label class="bar_ds" for="slide_ds1"></label>
+                <label class="bar_ds" for="slide_ds2"></label>
+                <label class="bar_ds" for="slide_ds3"></label>
+                <label class="bar_ds" for="slide_ds4"></label>
+                <label class="bar_ds" for="slide_ds5"></label>
+                <label class="bar_ds" for="slide_ds6"></label>
+            </section>
+
+        </section>
+
+        <!-- DIV -->
+
+        <section class="mainfake_vant">
+            <section class="content_vant">
+                <section class="slides_vant">
+
+                    <input type="radio" name="slide_vant" id="slide_vant1" checked>
+                    <input type="radio" name="slide_vant" id="slide_vant2">
+                    <input type="radio" name="slide_vant" id="slide_vant3">
+                    <input type="radio" name="slide_vant" id="slide_vant4">
+                    <input type="radio" name="slide_vant" id="slide_vant5">
+                    <input type="radio" name="slide_vant" id="slide_vant6">
+                    <input type="radio" name="slide_vant" id="slide_vant7">
+                    <input type="radio" name="slide_vant" id="slide_vant8">
+
+                    <section class="slide_vant s_vant1">
+                        <section class="texto_carrosel_vant">
+                            <h1>Vantagens de ser um hóspede disney</h1>
+                            <p> Há muitas vantagens em se hospedar em um dos hotéis da Disney durante a sua visita ao
+                                Walt Disney World Resort. Algumas das vantagens incluem:
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Vantagens.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1><strong>Magic Hours</strong></h1>
+                            <p>Os hóspedes dos hotéis da Disney têm acesso a horas mágicas extras em determinados
+                                parques temáticos, permitindo que eles entrem nos parques antes ou fiquem depois do
+                                horário normal de funcionamento. Isso significa menos tempo nas filas e mais tempo
+                                aproveitando as atrações.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/vantagens2.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1><strong>Transporte gratuito</strong></h1>
+                            <p>Os hóspedes da Disney têm acesso gratuito aos ônibus, barcos e monotrilhos da Disney,
+                                permitindo que se locomovam facilmente entre os parques temáticos, hotéis e áreas de
+                                compras e entretenimento.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Transportes_Gratuítos.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1><strong>Serviço de transporte de bagagem</strong></h1>
+                            <p>Os hóspedes da Disney podem ter suas malas enviadas diretamente do aeroporto para o hotel
+                                e depois para o quarto, sem precisar se preocupar com o transporte de bagagem.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Bagagem.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1>FastPass+</h1>
+                            <p>Os hóspedes da Disney podem agendar suas reservas de FastPass+ com antecedência,
+                                permitindo que evitem as filas em até três atrações por dia.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Fast_Pass.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1>Serviço de quarto gratuito</h1>
+                            <p>Os hóspedes da Disney podem desfrutar do serviço de quarto gratuito durante toda a sua
+                                estadia.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Quartos.jpeg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1>Entrada antecipada nos parques temáticos</h1>
+                            <p>Os hóspedes da Disney têm acesso antecipado aos parques temáticos em dias selecionados,
+                                permitindo que entrem no parque antes que ele seja aberto ao público geral.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Entrada_Antecipada.jpg">
+                    </section>
+
+                    <section class="slide_vant">
+                        <section class="texto_carrosel_vant">
+                            <h1>Reservas de restaurantes</h1>
+                            <p>Os hóspedes da Disney podem fazer reservas em restaurantes
+                                populares com antecedência,
+                                garantindo que consigam um lugar em locais que costumam ficar lotados rapidamente.
+                            </p>
+                        </section>
+                        <img src="./CSS/Imagens/homepage/Reservas_de_Restaurantes.jpg">
+                    </section>
+                </section>
+
+            </section>
+            <section class="navigation_vant">
+                <label class="bar_vant" for="slide_vant1"></label>
+                <label class="bar_vant" for="slide_vant2"></label>
+                <label class="bar_vant" for="slide_vant3"></label>
+                <label class="bar_vant" for="slide_vant4"></label>
+                <label class="bar_vant" for="slide_vant5"></label>
+                <label class="bar_vant" for="slide_vant6"></label>
+                <label class="bar_vant" for="slide_vant7"></label>
+                <label class="bar_vant" for="slide_vant8"></label>
+
+            </section>
+        </section>
+
+
 
         <footer>
-            <h3>Fale Conosco</h3>
-            <form>
-                <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui"></input>
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Insira seu email"></input>
-                <br><br>
-                <label>Telefone:</label>
-                <input type="number" placeholder="Insira seu telefone"></input>
-                <input type="submit" value="Enviar">
-            </form>
+            <section class="dv1_footer">
+                <section class="redes">
+
+                    <section class="redes_wpp">
+                        <h4>Whatsapp</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Whats.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tele">
+                        <h4>Telegram</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telegram.png" alt="">
+
+                    </section>
+
+                    <section class="redes_email">
+                        <h4>Email</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Email.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tel">
+                        <h4>Telefone</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telefone.png" alt="">
+
+                    </section>
+                </section>
+            </section>
+            <section class="dv2_footer">
+
+                <section class="fale_conosco">
+
+                    <form>
+                        <h3>Fale Conosco</h3>
+                        <label>Nome:</label>
+
+                        <input type="text" placeholder="Digite seu nome aqui"></input>
+
+                        <label>Email:</label>
+
+                        <input type="email" placeholder="Insira seu email"></input>
+
+                        <label>Telefone:</label>
+
+                        <input type="number" placeholder="Insira seu telefone"></input>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </section>
+            </section>
         </footer>
     </main>
 </body>
