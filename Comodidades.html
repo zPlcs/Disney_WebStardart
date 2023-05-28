@@ -6,126 +6,823 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Of Animation - Comodidades</title>
+    <link rel="icon" type="image/jpg" href="./CSS/Imagens/homepage/Logo/Disney_site_logo.png" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 1.5vw;
+        }
+
+        p {
+            font-size: 0.8vw;
+        }
+
+        li {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        h4 {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        main {
+            width: 90%;
+            display: flex;
+            margin-top: 105px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 105px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 100px 10px 10px 10px;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 13vh;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        nav ul li {
+            display: inline-flex;
+            padding: 0.5% 3%;
+            margin-right: -5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0;
+            width: 70%;
+            display: flex;
+            float: right;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li:hover {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            width: 70%;
+            position: fixed;
+        }
+
+        #logo {
+            width: 20%;
+        }
+
+        a img {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+
+
+        .mainfake {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 75px;
+        }
+
+        
+
+        .content_intro {
+            width: 80%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 75px;
+            margin-top: 50px;
+        }
+
+        .content_intro h1 {
+            font-size: 2vw;
+        }
+
+        .content_intro p {
+            font-size: 1vw;
+        }
+
+        .content_intro_txt {
+            width: 37.5%;
+            text-align: left;
+            margin-right: 2.5%;
+        }
+
+        .content_intro_img {
+            width: 57.5%;
+            margin-left: 2.5%;
+        }
+
+        .content_intro_img img {
+            width: 100%;
+        }
+
+        .mainfake_art {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 570px;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_art {
+            height: 540px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+      
+
+        .texto_carrosel_art {
+            width: 100%;
+            height: 30px;
+            margin-bottom: 50px;
+        }
+
+        .content_art .navigation_art {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation_art {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bar_art {
+            width: 10%;
+            height: 10px;
+            border: 2px solid #000000;
+            margin: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .bar_art:hover {
+            background-color: #000000;
+        }
+
+        .mainfake_art input {
+            display: none;
+        }
+
+        .slides_art {
+            display: flex;
+            width: 300%;
+        }
+
+
+        .slide_art {
+            width: 33.33%;
+            transition: 0.6s;
+            height: 450px;
+        }
+
+        .slide_art img {
+            width: 100%;
+            height: 90%;
+
+        }
+
+        #slide_art1:checked~.s_art1 {
+            margin-left: 0;
+        }
+
+        #slide_art2:checked~.s_art1 {
+            margin-left: -33.33%;
+        }
+
+        #slide_art3:checked~.s_art1 {
+            margin-left: -66.66%;
+        }
+
+        .slide_art button {
+            width: 100%;
+        }
+
+        .mainfake_piscina {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 650px;
+            margin-bottom: 75px;
+            margin-top: 75px;
+        }
+
+
+        .content {
+            height: 625px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .content h1 {
+            margin-bottom: 25px;
+
+        }
+
+     
+
+        .texto_carrosel {
+            width: 100%;
+            height: 125px;
+            margin-bottom: 50px;
+        }
+
+        .content .navigation {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigation {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .bar {
+            width: 10%;
+            height: 10px;
+            border: 2px solid #000000;
+            margin: 6px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .bar:hover {
+            background-color: #000000;
+        }
+
+        .mainfake_piscina input {
+            display: none;
+        }
+
+        .slides {
+            display: flex;
+            width: 400%;
+        }
+
+
+        .slide {
+            width: 25%;
+            transition: 0.6s;
+            height: 450px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 90%;
+        }
+
+        #slide1:checked~.s1 {
+            margin-left: 0;
+        }
+
+        #slide2:checked~.s1 {
+            margin-left: -25%;
+        }
+
+        #slide3:checked~.s1 {
+            margin-left: -50%;
+        }
+
+        #slide4:checked~.s1 {
+            margin-left: -75%;
+        }
+
+        .content_recreacoes {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+
+        .content_local_text {
+            width: 80%;
+            margin-bottom: 100px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .content_recreacoes_fogueira {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_fogueira img {
+            width: 45%;
+            margin-left: 10%;
+            height: 250px;
+            float: right;
+
+        }
+
+        .content_recreacoes_fogueira_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_filme {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_filme img {
+            width: 45%;
+            margin-right: 10%;
+            height: 250px;
+            float: right;
+
+        }
+
+        .content_recreacoes_filme_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_app {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_app img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-left: 10%;
+        }
+
+        .content_recreacoes_app_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_trilha {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+
+        }
+
+        .content_recreacoes_trilha img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-right: 10%;
+        }
+
+        .content_recreacoes_trilha_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_recreacoes_playground {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+        .content_recreacoes_playground img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-left: 10%;
+        }
+
+        .content_recreacoes_playground_text {
+            text-align: left;
+            width: 45%;
+
+        }
+
+        .content_recreacoes_arcade {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+
+            width: 80%;
+            margin-top: 75px;
+
+        }
+
+        .content_recreacoes_arcade img {
+            width: 45%;
+            height: 250px;
+            float: right;
+            margin-right: 10%;
+        }
+
+        .content_recreacoes_arcade_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_pesca img {
+            width: 45%;
+            height: 250px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            float: right;
+            text-align: left;
+            margin-right: 10%;
+        }
+
+        .fale_conosco {
+            width: 100%;
+        }
+
+        .dv2_footer {
+            width: 50%;
+
+        }
+
+        .dv2_footer input {
+            margin-bottom: 5%;
+        }
+
+        .redes {
+            width: 80%;
+            display: inline-block;
+
+        }
+
+        .redes h4 {
+            top: 0;
+        }
+
+        .dv1_footer {
+            width: 50%;
+        }
+
+
+        .redes_wpp {
+
+            padding-left: auto;
+            padding-right: auto;
+            margin-right: 20px;
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_tele {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_email {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+
+        }
+
+        .redes_tel {
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes img {
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <header>
-            <nav>
-                <a href="Homepage.html"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg" width="10%"></a>
-                <a href="#">Indíce 1</a>
-                <a href="#">Indíce 2</a>
-                <a href="#">Indíce 3</a>
-                <a href="#">Indíce 4</a>
-                <a href="#">Indíce 5</a>
-            </nav>
-        </header>
+        <section class="mainfake">
+            <header>
+                <nav>
+                    <a href="Homepage.html" id="logo"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg"></a>
+                    <ul>
+                        <li><a href="#ind1">indice 1</a></li>
+                        <li><a href="#ind2">indice 1</a></li>
+                        <li><a href="#ind3">indice 1</a></li>
+                        <li><a href="#ind4">indice 1</a></li>
+                        <li><a href="#ind4">indice 1</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </section>
 
-        <section>
-            <h1>Comodidades</h1>
-            <img src="./CSS/Imagens/Comodidades/Mickey.jpeg">
-            <p>No nosso Disney's Art of Animation Resort, temos diversos benfícios e vantagens para nossos hóspedes,
-                essas que chamamos de comodidades presentes em todo o resort.</p>
+        <section class="content_intro">
+            <section class="content_intro_txt">
+                <h1>Comodidades do Disney's Art Of Animation Resort</h1>
+                <p>No nosso Disney's Art of Animation Resort, temos diversos benfícios e vantagens para nossos hóspedes,
+                    essas que chamamos de comodidades presentes em todo o resort.</p>
+            </section>
+            <section class="content_intro_img">
+                <img src="./CSS/Imagens/Comodidades/Mickey.jpeg">
+            </section>
         </section>
-        <br>
-        <section>
-            <section>
-                <h2>Comodidades do Resort</h2>
+
+
+        <section class="mainfake_art">
+            <section class="content_art">
+                <h1>Transporte no Resort</h1>
+                <section class="slides_art">
+
+                    <input type="radio" name="slide_art" id="slide_art1" checked>
+                    <input type="radio" name="slide_art" id="slide_art2">
+                    <input type="radio" name="slide_art" id="slide_art3">
+
+
+                    <section class="slide_art s_art1">
+                        <section class="texto_carrosel_art">
+                            <p>Desloque-se pelo Walt Disney World Resort, com tranquilidade, com as opções de transporte
+                                gratuíto,
+                                sendo pelo Disney Skyliner, que basicametne é um sistema de gôndolas que oferece uma
+                                visão
+                                maravilhosa de boa parte do Walt Disney World Resort, conectando os visitantes entre
+                                diversos
+                                resorts.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Comodidades/Skyliner.jpg">
+
+                    </section>
+
+                    <section class="slide_art">
+                        <section class="texto_carrosel_art">
+                            <p>Ou também transite pelo tranporte de ônibus Disney, que você pode acessar a área do
+                                Disney Springs,
+                                Parques aquáticos e temáticos e também os hotéis de forma gratuíta.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Comodidades/Onibus.jpg">
+
+                    </section>
+
+                    <section class="slide_art">
+                        <section class="texto_carrosel_art">
+                            <p>O ponto de ônibus fo Disney's Art of Animation Resort fica na parte externa do Animation
+                                Hall.</p>
+                        </section>
+                        <img src="./CSS/Imagens/Comodidades/Bus_stop.webp">
+                    </section>
+                </section>
+
             </section>
-            <br>
-            <section>
-                <h2>Transporte no Resort</h2>
-                <img src="./CSS/Imagens/Comodidades/Skyliner.jpg">
-                <p>Desloque-se pelo Walt Disney World Resort, com tranquilidade, com as opções de transporte gratuíto,
-                    sendo pelo Disney Skyliner, que basicametne é um sistema de gôndolas que oferece uma visão
-                    maravilhosa de boa parte do Walt Disney World Resort, conectando os visitantes entre diversos
-                    resorts.</p>
-                    <img src="./CSS/Imagens/Comodidades/Onibus.jpg">
-                <p>Ou também transite pelo tranporte de ônibus Disney, que você pode acessar a área do Disney Springs,
-                    Parques aquáticos e temáticos e também os hotéis de forma gratuíta.</p>
-                    <img src="./CSS/Imagens/Comodidades/Bus_stop.webp">
-                <p>O ponto de ônibus fo Disney's Art of Animation Resort fica na parte externa do Animation Hall.</p>
+            <section class="navigation_art">
+                <label class="bar_art" for="slide_art1"></label>
+                <label class="bar_art" for="slide_art2"></label>
+                <label class="bar_art" for="slide_art3"></label>
+
             </section>
-            <br>
-            <section>
-                <h2>Serviço Minnie Van</h2>
-                <img src="./CSS/Imagens/Comodidades/Serviço_minnie_vanwebp.webp">
-                <p>Desloque-se com maior estilo e conforto com o serviço Minnie Van dentro do Walt Disney World Resort.
-                </p>
-            </section>
-            <br>
-            <section>
-                <h2>Internet Wi-Fi gratuíta.</h2>
+
+        </section>
+
+        <section id="ind1" class="content_recreacoes">
+            <section class="content_recreacoes_fogueira">
+                <section class="content_recreacoes_fogueira_text">
+                    <h1>Internet Wi-Fi gratuita.</h1>
+                    <p>Utilize internet gratuita que funciona em toda a extensão dos parques temáticos e hotéis do Walt
+                        Disney World Resort, sendo disponibilizada pela AT&T, patrocinadora oficial da conexão sem fio
+                        do
+                        Walt Disney World.</p>
+                </section>
                 <img src="./CSS/Imagens/Comodidades/wifi.jpg">
-                <p>Utilize internet gratuita que funciona em toda a extensão dos parques temáticos e hotéis do Walt
-                    Disney World Resort, sendo disponibilizada pela AT&T, patrocinadora oficial da conexão sem fio do
-                    Walt Disney World.</p>
             </section>
-            <br>
-            <section>
-                <h2>Estacionamento</h2>
+
+            <section id="ind2" class="content_recreacoes_filme">
                 <img src="./CSS/Imagens/Comodidades/area-de-estacionamento.jpg">
-                <p>O estacionamento pernoite sem manobrista é gratuito, e também para visitantes diurnos.</p>
+                <section class="content_recreacoes_filme_text">
+                    <h1>Estacionamento</h1>
+                    <p>O estacionamento pernoite sem manobrista é gratuito, e também para visitantes diurnos.</p>
+                </section>
             </section>
-            <br>
-            <section>
-                <h2>Check-in on-line</h2>
+
+            <section id="ind3" class="content_recreacoes_app">
+                <section class="content_recreacoes_app_text">
+                    <h1>Serviço Minnie Van</h1>
+                    <p>Desloque-se com maior estilo e conforto com o serviço Minnie Van dentro do Walt Disney World
+                        Resort.
+                    </p>
+                </section>
+                <img src="./CSS/Imagens/Comodidades/Serviço_minnie_vanwebp.webp">
+            </section>
+
+            <section id="ind4" class="content_recreacoes_trilha">
                 <img src="./CSS/Imagens/Comodidades/Online_check.webp">
-                <p>Com o aplicativo My Disney Experience, você pode fazer o check-in on-line para não pegar filas, e ir
-                    direto para seu hotel Resort Disney.</p>
+                <section class="content_recreacoes_trilha_text">
+                    <h1>Check-in on-line</h1>
+                    <p>Com o aplicativo My Disney Experience, você pode fazer o check-in on-line para não pegar
+                        filas, e ir
+                        direto para seu hotel Resort Disney.</p>
+                </section>
             </section>
-            <br>
-            <section>
-                <h2>Caixas Eletrônicos</h2>
+
+            <section class="content_recreacoes_playground">
+                <section class="content_recreacoes_playground_text">
+                    <h1>Caixas Eletrônicos</h1>
+                    <p>Caixas eletrônicos 24H na area da Recepção.</p>
+                </section>
                 <img src="./CSS/Imagens/Comodidades/atm.jpg">
-                <p>Caixas eletrônicos 24H na area da Recepção.</p>
             </section>
-            <br>
-            <section>
-                <h2>Câmbio</h2>
+
+            <section id="ind2" class="content_recreacoes_arcade">
                 <img src="./CSS/Imagens/Comodidades/din.jpg">
-                <p>Os hóspedes podem trocar moedas estrangeiras na recepção ou no Lobby Concierge do Hotel Resort.</p>
+                <section class="content_recreacoes_arcade_text">
+                    <h2>Câmbio</h2>
+                    <p>Os hóspedes podem trocar moedas estrangeiras na recepção ou no Lobby Concierge do Hotel
+                        Resort.</p>
+                </section>
             </section>
-            <br>
-            <section>
-                <h2>Áreas para fumantes</h2>
+
+            <section id="ind3" class="content_recreacoes_app">
+                <section class="content_recreacoes_app_text">
+                    <h1>Áreas para fumantes</h1>
+                    <p>Para manter o bem estar de todos, existem áreas exclusivas para fumantes.</p>
+                </section>
                 <img src="./CSS/Imagens/Comodidades/zono_de_fumantes.jpg">
-                <p>Para manter o bem estar de todos, existem áreas exclusivas para fumantes.</p>
             </section>
-            <br>
-            <section>
-                <h2>Serviços de lavanderia e lavagem a seco</h2>
+
+            <section id="ind4" class="content_recreacoes_trilha">
                 <img src="./CSS/Imagens/Comodidades/Lavanderia.jpg">
-                <p>Lavantedrias self-service 24H disponíveis nos arredores das piscinas do Disney's Art of Animation
-                    Resort.</p>
+                <section class="content_recreacoes_trilha_text">
+                    <h1>Serviços de lavanderia e lavagem a seco</h1>
+                    <p>Lavantedrias self-service 24H disponíveis nos arredores das piscinas do Disney's Art of
+                        Animation
+                        Resort.</p>
+                </section>
             </section>
-            <br>
-            <section>
-                <h2>Serviço de camareira</h2>
+
+            <section class="content_recreacoes_playground">
+                <section class="content_recreacoes_playground_text">
+                    <h1>Serviço de camareira</h1>
+                    <p>Durante sua estadia em hotel Resort Disney, terá seu quarto sempre higienizado e limpo.</p>
+                </section>
                 <img src="./CSS/Imagens/Comodidades/camareira.webp">
-                <p>Durante sua estadia em hotel Resort Disney, terá seu quarto sempre higienizado e limpo.</p>
             </section>
-            <br>
-            <section>
-                <h2>Serviços de correspondência</h2>
+
+            <section id="ind2" class="content_recreacoes_arcade">
                 <img src="./CSS/Imagens/Comodidades/disneys-resorts-rca-turismo-comodidades-correspondencias.jpg">
-                <p>Correspondecias de todo tipo, sejam elas cartões-postais, cartas e pacotes já embalados e enderaçados
-                    com tarifas pagas podem ser enviados pela Recepção ou pelo Concierge Desk.</p>
+                <section class="content_recreacoes_arcade_text">
+                    <h1>Serviços de correspondência</h1>
+                    <p>Correspondecias de todo tipo, sejam elas cartões-postais, cartas e pacotes já embalados e
+                        enderaçados com
+                        tarifas pagas podem ser enviados pela Recepção ou pelo Concierge Desk.</p>
+                </section>
             </section>
+
         </section>
+
+
         <footer>
-            <h3>Fale Conosco</h3>
-            <form>
-                <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui"></input>
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Insira seu email"></input>
-                <br><br>
-                <label>Telefone:</label>
-                <input type="number" placeholder="Insira seu telefone"></input>
-                <input type="submit" value="Enviar">
-            </form>
+            <section class="dv1_footer">
+                <section class="redes">
+
+                    <section class="redes_wpp">
+                        <h4>Whatsapp</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Whats.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tele">
+                        <h4>Telegram</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telegram.png" alt="">
+
+                    </section>
+
+                    <section class="redes_email">
+                        <h4>Email</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Email.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tel">
+                        <h4>Telefone</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telefone.png" alt="">
+
+                    </section>
+                </section>
+            </section>
+            <section class="dv2_footer">
+
+                <section class="fale_conosco">
+
+                    <form>
+                        <h3>Fale Conosco</h3>
+                        <label>Nome:</label>
+
+                        <input type="text" placeholder="Digite seu nome aqui"></input>
+
+                        <label>Email:</label>
+
+                        <input type="email" placeholder="Insira seu email"></input>
+
+                        <label>Telefone:</label>
+
+                        <input type="number" placeholder="Insira seu telefone"></input>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </section>
+            </section>
         </footer>
     </main>
 </body>
