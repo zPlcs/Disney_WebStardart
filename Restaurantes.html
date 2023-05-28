@@ -6,31 +6,373 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Art Of Animation - Restaurantes</title>
+    <link rel="icon" type="image/jpg" href="./CSS/Imagens/homepage/Logo/Disney_site_logo.png" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 1.5vw;
+        }
+
+        p {
+            font-size: 0.8vw;
+        }
+
+        li {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        h4 {
+            font-size: 1vw;
+            white-space: nowrap;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+
+        main {
+            width: 90%;
+            display: flex;
+            margin-top: 105px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 105px;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 100px 10px 10px 10px;
+        }
+
+        li {
+            list-style: none;
+
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            height: 13vh;
+            background-color: rgb(255, 255, 255);
+        }
+
+
+        nav ul li {
+            display: inline-flex;
+            padding: 0.5% 3%;
+            margin-right: -5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        ul {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 0;
+            width: 70%;
+            display: flex;
+            float: right;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        nav ul li:hover {
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            width: 70%;
+            position: fixed;
+        }
+
+        #logo {
+            width: 20%;
+        }
+
+        a img {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            width: 100%;
+        }
+
+        .mainfake {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .content_intro {
+            width: 80%;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            margin-top: 50px;
+        }
+
+
+        .content_intro_txt {
+            width: 37.5%;
+            text-align: left;
+            margin-right: 2.5%;
+        }
+
+        .content_intro_img {
+            width: 57.5%;
+            margin-left: 2.5%;
+        }
+
+        .content_intro_img img {
+            width: 100%;
+        }
+
+        .content_land {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+
+
+        .content_land img {
+            width: 100%;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        .content_sobre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 75px;
+            margin-bottom: 75px;
+        }
+
+
+        .content_cardapio {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 75px;
+            margin-bottom: 50px;
+        }
+
+        .content_cardapio img {
+            width: 45%;
+            margin-left: 10%;
+            height: 250px;
+            float: right;
+        }
+
+        .content_cardapio_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_culinaria {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .content_culinaria img {
+            width: 45%;
+            margin-right: 10%;
+            height: 250px;
+            float: right;
+        }
+
+        .content_culinaria_text {
+            text-align: left;
+            width: 45%;
+        }
+
+        .content_info {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .content_horarios {
+            width: 47.5%;
+            margin-right: 2.5%;
+        }
+
+        .content_horarios h1 {
+            font-size: 4vw;
+        }
+
+        .content_horarios p {
+            font-size: 1vw;
+        }
+
+        .content_preco {
+            width: 47.5%;
+            margin-left: 2.5%;
+        }
+
+        .content_preco h1 {
+            font-size: 4vw;
+        }
+
+
+
+        footer {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        footer form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            float: right;
+            text-align: left;
+            margin-right: 10%;
+        }
+
+        .fale_conosco {
+            width: 100%;
+        }
+
+        .dv2_footer {
+            width: 50%;
+
+        }
+
+        .dv2_footer input {
+            margin-bottom: 5%;
+        }
+
+        .redes {
+            width: 80%;
+            display: inline-block;
+
+        }
+
+        .redes h4 {
+            top: 0;
+        }
+
+        .dv1_footer {
+            width: 50%;
+        }
+
+
+        .redes_wpp {
+
+            padding-left: auto;
+            padding-right: auto;
+            margin-right: 20px;
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_tele {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes_email {
+
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+
+        }
+
+        .redes_tel {
+            width: 22%;
+            height: 100%;
+            display: inline-block;
+
+        }
+
+        .redes img {
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
     <main>
-        <header>
-            <nav>
-                <a href="Homepage.html"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg" width="10%"></a>
-                <a href="#">Indíce 1</a>
-                <a href="#">Indíce 2</a>
-                <a href="#">Indíce 3</a>
-                <a href="#">Indíce 4</a>
-                <a href="#">Indíce 5</a>
-            </nav>
-        </header>
-        <section>
-            <h1>Restaurantes</h1>
-            <img src="./CSS/Imagens/Restaurantes/Restaurante_1.jpeg">
-            <p>Em quase todos os Resorts, existem restaurantes que remete a temática dos mesmos, porém também podem ser
-                encontrados
-                diversos serviços de entrega de comida direto para seu quarto no Resort.</p>               
+        <section class="mainfake">
+            <header>
+                <nav>
+                    <a href="Homepage.html" id="logo"><img src="./CSS/Imagens/homepage/Logo/Disney.jpg"></a>
+                    <ul>
+                        <li><a href="#">Indíce 1</a></li>
+                        <li><a href="#">Indíce 2</a></li>
+                        <li><a href="#">Indíce 3</a></li>
+                        <li><a href="#">Indíce 4</a></li>
+                        <li><a href="#">Indíce 5</a></li>
+                    </ul>
+                </nav>
+            </header>
         </section>
 
-        <section>
+        <section class="content_intro">
+            <section class="content_intro_txt">
+                <h1>Restaurantes no Disney's Art Of Animation Resort</h1>
+                <p>Em quase todos os Resorts, existem restaurantes que remete a temática dos mesmos, porém também podem
+                    ser
+                    encontrados
+                    diversos serviços de entrega de comida direto para seu quarto no Resort.</p>
+            </section>
+            <section class="content_intro_img">
+                <img src="./CSS/Imagens/Restaurantes/Restaurante_4.jpeg">
+            </section>
+        </section>
+
+        <section class="content_land">
             <h2>Landscape Flavors</h2>
-            <img src="./CSS/Imagens/Restaurantes/Restaurante_2.jpeg">
+            <img src="./CSS/Imagens/Restaurantes/Restaurante_1.jpeg">
             <p>Landscape Flavors é um restaurante localizado dentro do Disney's Art of Animation Resort, que possuí 4
                 setores de
                 almoço ou janta, com a temática dos mesmos filmes do resort, sendo O Rei Leão, Carros, Procurando Nemo e
@@ -41,33 +383,96 @@
                 e
                 diversas bebidas características.</p>
         </section>
+        <!-- -->
+        <section class="content_sobre">
+            <section class="content_cardapio">
+                <section class="content_cardapio_text">
+                    <h1>Seu cárdapio</h1>
+                    <p>Seus príncipais pratos são inspirados nos favoritos norte-americanos, incluido pizzas, saladas,
+                        hambúrgueres
+                        e
+                        diversas bebidas características.</p>
+                </section>
+                <img src="./CSS/Imagens/Restaurantes/Restaurante_3.jpeg">
+            </section>
 
-        <section>
-            <h2>Horários</h2>
-            <p>Seu horário de funcionamento é das 7h00 até as 23h00.</p>
+            <section class="content_culinaria">
+                <img src="./CSS/Imagens/Restaurantes/Restaurante_2.jpeg">
+                <section class="content_culinaria_text">
+                    <h1>A culinária que atende a todos os paladares</h1>
+                    <p>E seu tipo de culinária principal, é a Culinária Americana tradicional</p>
+                </section>
+            </section>
         </section>
 
-        <section>
-            <h2>Preço</h2>
-            <p>Para almoço e jantar, o restaurante oferece refeições a partir de R$75,69 por adulto. E para café da
-                manhã,
-                o
-                restaurante também oferece refeições a partir de R$75,69 por adulto.</p>
+        <!---->
+        <section class="content_info">
+            <section class="content_horarios">
+                <h1>Horários</h1>
+                <p>Seu horário de funcionamento é das 7h00 até as 23h00.</p>
+            </section>
+            <section class="content_preco">
+                <h1>Preços</h1>
+                <p>Para almoço e jantar, o restaurante oferece refeições a partir de R$75,69 por adulto. E para café da
+                    manhã,
+                    o
+                    restaurante também oferece refeições a partir de R$75,69 por adulto.</p>
+            </section>
         </section>
+        <!-- -->
+
 
         <footer>
-            <h3>Fale Conosco</h3>
-            <form>
-                <label>Nome:</label>
-                <input type="text" placeholder="Digite seu nome aqui"></input>
-                <br><br>
-                <label>Email:</label>
-                <input type="email" placeholder="Insira seu email"></input>
-                <br><br>
-                <label>Telefone:</label>
-                <input type="number" placeholder="Insira seu telefone"></input>
-                <input type="submit" value="Enviar">
-            </form>
+            <section class="dv1_footer">
+                <section class="redes">
+
+                    <section class="redes_wpp">
+                        <h4>Whatsapp</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Whats.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tele">
+                        <h4>Telegram</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telegram.png" alt="">
+
+                    </section>
+
+                    <section class="redes_email">
+                        <h4>Email</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Email.png" alt="">
+
+                    </section>
+
+                    <section class="redes_tel">
+                        <h4>Telefone</h4>
+                        <img src="./CSS/Imagens/homepage/Rodapé/Telefone.png" alt="">
+
+                    </section>
+                </section>
+            </section>
+            <section class="dv2_footer">
+
+                <section class="fale_conosco">
+
+                    <form>
+                        <h3>Fale Conosco</h3>
+                        <label>Nome:</label>
+
+                        <input type="text" placeholder="Digite seu nome aqui"></input>
+
+                        <label>Email:</label>
+
+                        <input type="email" placeholder="Insira seu email"></input>
+
+                        <label>Telefone:</label>
+
+                        <input type="number" placeholder="Insira seu telefone"></input>
+
+                        <input type="submit" value="Enviar">
+                    </form>
+                </section>
+            </section>
         </footer>
     </main>
 </body>
